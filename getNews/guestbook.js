@@ -1,0 +1,279 @@
+﻿const http = require("http");
+const express = require("express");
+const fs = require("fs");
+const mysql = require("mysql");
+const bodyParser = require("body-parser"); //post请求获取传参
+const cookieParser = require("cookie-parser"); //获取cookie
+const busboy = require("connect-busboy"); //文件上传
+const session = require('express-session'); //会话
+const app = express();
+const DB_CONFIG = require('./sql.json')
+const axios = require('axios');
+
+// expresspost中间件
+//发送回调信息
+
+
+
+sendMsg('主人服务器API接口启动啦~'+new Date())
+app.use(bodyParser.json()); //获取post的data
+app.use(cookieParser()); //获取cookie
+app.use(busboy()) //文件上传模块
+app.use( //获取post的data
+    bodyParser.urlencoded({
+        extended: true
+    })
+);
+app.use(session({
+    //这里的name指是cookie的name
+    name: 'NNNNzs_session',
+    secret: 'keyboard cat',
+    cookie: ('name', 'value', {
+        path: '/',
+        httpOnly: true,
+        secure: false,
+        maxAge: 3600000 * 24 * 3 //三天
+    }),
+    //重新保存：强制会话保存即使是未修改的。默认为true但是得写上
+    resave: true,
+    //强制“未初始化”的会话保存到存储。 
+    saveUninitialized: true,
+}))
+
+//路由
+//允许所有请求跨域
+app.all("*", function (req, res, next) {
+    // let ip = req.ip.match(/\d+\.\d+\.\d+\.\d+/)[0];
+    res.header("Access-Control-Allow-Origin", "https://me.nnnnzs.cn");//正式服
+    // res.header("Access-Control-Allow-Origin", "http://localhost:8080");//Vuecli
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", "PUT, GET, POST, DELETE, OPTIONS");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.header("Access-Control-Allow-Headers", "Content-Type");
+    res.header("Access-Control-Allow-Credentials", "true")
+    next();
+});
+//监听路由
+app.get("/api/getNews", (req, res) => {
+    console.log(req.query)
+    getNewsFromSql(req.query)
+        .then(resp => {
+            res.header("Cache-Control","max-age=1800");
+            res.send(resp); //数据库查完之后再发送
+        })
+        .catch(error => {
+            res.send(error);
+        });
+});
+app.post("/api/register", (req, res) => {
+    //判断重复用的函数
+    if (req.body.type == "isRepeat") {
+        checkAccount(req.body.account)
+            .then(success => res.send(success))
+            .catch(error => res.send(error))
+    }
+    if (req.body.type == "register") {
+        //注册之前再判重一次
+        checkAccount(req.body.data.account)
+            .then(success => {
+                if (success.status === 'success') {
+                    let cookie = req.cookies
+                    let user = req.body.data;
+                    user.registered_ip = req.ip.match(/\d+\.\d+\.\d+\.\d+/)[0];
+                    user.registered_time = new Date();
+                    // res.send(user)
+                    console.log(user)
+                    register(user)
+                        .then(data => {
+                            console.log(data)
+                            res.send(data)
+                        })
+                        .catch(err => res.send(err))
+                }
+                else{
+                    res.send(success)
+                }
+            })
+    }
+});
+app.post("/api/login", (req, res) => {
+    let sess = req.session;
+    let ip = req.ip.match(/\d+\.\d+\.\d+\.\d+/)[0];
+    let data = req.body;
+    console.log(req.cookies)
+    login(data)
+        .then(results => {
+            updateLoginTime(req.body.account, ip)
+            results = Object.assign(results,sess)
+            res.send(results)
+        })
+        .catch(error => res.send(error))
+});
+app.post('/api/test', (req, res) => {
+    console.log(req.cookies)
+    res.cookie('sesion_id', '123456');
+    res.send(req.cookies);
+})
+
+function getNewsFromSql(query) {
+    let {
+        keywords = '', type = '头条', page = '1'
+    } = query;
+    return new Promise(function (resolve, reject) {
+        let connection = mysql.createConnection(DB_CONFIG);
+        let sqlQuery;
+        connection.connect();
+        if (keywords) {
+            sqlQuery = `SELECT * FROM newslist where title like '%${keywords}%' or guide like '%${keywords}%' ORDER BY date DESC limit ${(page-1)*30},30`;
+        } else {
+            sqlQuery = `SELECT * FROM newslist WHERE category='${type}' ORDER BY date DESC limit ${(page-1)*30},30`;
+        }
+        connection.query(sqlQuery, function (error, results, fields) {
+            if (error) {
+                console.log(error);
+                reject({
+                    status: 'error',
+                    data: error
+                });
+            }
+            if (results) {
+                resolve({
+                    status: 'success',
+                    data: results
+                });
+            }
+        });
+        connection.end();
+    });
+}
+
+function checkAccount(account) {
+    return new Promise(function (resolve, reject) {
+        let connection = mysql.createConnection(DB_CONFIG);
+        connection.connect();
+        let sql = `SELECT account FROM user_info WHERE account='${account}'`;
+        connection.query(sql, (err, results) => {
+            if (err) {
+                //查询错误
+                reject({
+                    status: 'error',
+                    data: err
+                });
+            }
+            if (results) {
+                results.length == 0 ?
+                    resolve({
+                        status: 'success',
+                        data: '不重复'
+                    }) :
+                    resolve({
+                        status: 'error',
+                        data: '重复'
+                    });
+            }
+        });
+        connection.end();
+    });
+}
+
+function register(data) {
+    let {
+        account,
+        password,
+        nickname,
+        registered_ip,
+        registered_time,
+        res
+    } = data;
+    return new Promise(function (resolve, reject) {
+        let connection = mysql.createConnection(DB_CONFIG);
+        connection.connect();
+        let sql = 'INSERT INTO user_info(account,password,nickname,registered_ip,registered_time) VALUES(?,?,?,?,?)';
+        let formData = [account, password, nickname, registered_ip, registered_time]
+        connection.query(sql, formData, (err, results) => {
+            if (err) {
+                //注册错误
+                // console.log(err)
+                reject({
+                    status: 'error',
+                    data: err
+                });
+            }
+            if (results) {
+                resolve({
+                    status: 'success',
+                    data: results
+                });
+            }
+        });
+        connection.end();
+    });
+}
+
+function login(data) {
+    let {
+        account,
+        password,
+    } = data;
+    return new Promise(function (resolve, reject) {
+        let connection = mysql.createConnection(DB_CONFIG);
+        connection.connect();
+        let sql = `SELECT account,nickname,password,login_time,login_ip FROM user_info WHERE account='${account}'`;
+        connection.query(sql, (err, results) => {
+            if (err) {
+                reject({
+                    status: 'error',
+                    data: err
+                });
+            }
+            if (results) {
+                if (results.length == 0)
+                    reject({
+                        status: 'error',
+                        data: '账号不存在'
+                    })
+                else {
+                    if (password == results[0].password) {
+                        resolve({
+                            status: 'success',
+                            data: results[0]
+
+                        })
+                    } else {
+                        reject({
+                            status: 'error',
+                            data: '密码错误'
+                        })
+                    }
+                }
+
+            }
+        });
+        connection.end();
+    });
+}
+
+function updateLoginTime(account, ip) {
+    let connection = mysql.createConnection(DB_CONFIG);
+    connection.connect();
+    let sql = `UPDATE user_info SET login_time = ?,login_ip=? WHERE account='${account}'`;
+    let val = [new Date(), ip]
+    connection.query(sql, val, (err, results) => {
+        if (err) {
+            console.log(err)
+        }
+        if (results) {
+            console.log(results)
+        }
+    });
+    connection.end();
+}
+function sendMsg(msg){
+    var msg = encodeURI(msg);
+    axios.get('https://sc.ftqq.com/SCU36847T91a389aca957b1bf554b2e728328d1185c029f702c10b.send?text='+msg);
+}
+//创建服务
+var httpServer = http.createServer(app);
+httpServer.listen(3001, function () {
+    console.log("HTTP服务在3001端口开启");
+});
