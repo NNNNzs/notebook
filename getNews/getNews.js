@@ -5,97 +5,12 @@ const cheerio = require('cheerio');
 const sqlConfig = require('./sql.json')
 const baseURL = 'http://v.juhe.cn/toutiao/index?key=972d027f2c56b51d99dec043f49618d0&type=';
 
-// module.exports = function () {
-//     this.types = ['top', 'shehu', 'guonei', 'guoji', 'yule', 'tiyu', 'keji'];
-//     this.baseURL = 'http://v.juhe.cn/toutiao/index?key=972d027f2c56b51d99dec043f49618d0&type=';
-//     this.name = "getNews";
-//     this.getNewsByApi = function (type, callback) {
-//         let pageUrl = baseURL + type;
-//         let str = `\n${new Date} 执行爬取操作\n`
-//         fs.appendFileSync("./log.txt", str)
-//         console.log(str)
-//         http.get(pageUrl, function (res) {
-//             let html = ''; //这是源数据
-//             res.on('data', function (data) {
-//                 html += data;
-//             });
-//             res.on('end', function () {
-//                 html = JSON.parse(html)
-//                 callback(html)
-//                 html = '';
-//             })
-//         });
-//     };
-//     this.getGuideByUrl = function (URL, callback) {
-//         http.get(URL, function (res) {
-//             let html = '';
-//             res.on('data', function (data) {
-//                 html += data;
-//             });
-//             res.on('end', function () {
-//                 let $ = cheerio.load(html, {
-//                     ignoreWhitespace: true,
-//                 })
-//                 guide = $('p').first().text() || $('p').last().text() || '暂无介绍';
-//                 content = $('#content').html();
-//                 callback(guide, content);
-//                 html = '';
-//             })
-//         });
-//     };
-//     this.setDateIntoMysql = function (html) {
-//         let dataList = html.result.data; //新闻数据列表
-//         for (index in dataList) {
-//             let thisData = dataList[index];
-//             //根据url获取描述和新闻内容后,一起存入数据库
-//             this.getGuideByUrl(thisData.url, function (guide, content) {
-//                 let connection = mysql.createConnection(sqlConfig)
-//                 connection.connect();
-//                 thisData.guide = guide;
-//                 thisData.content = content;
-//                 let sqlQuery = 'INSERT INTO newslist(uniquekey,title,guide,date,category,author_name,content,url,thumbnail_pic_s,thumbnail_pic_s02,thumbnail_pic_s03,ins_time) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)';
-//                 let data = [thisData.uniquekey, thisData.title, thisData.guide, thisData.date, thisData.category, thisData.author_name, thisData.content, thisData.url, thisData.thumbnail_pic_s, thisData.thumbnail_pic_s02, thisData.thumbnail_pic_s03, new Date()];
-//                 connection.query(sqlQuery, data, function (error, results) {
-//                     if (error) {
-//                         error = {
-//                             'errorcode': error.code,
-//                             'sqlMessage': error.sqlMessage
-//                         }
-//                         writeLog(error)
-//                         connection.end();
-//                     }
-//                     if (results) {
-//                         writeLog(results)
-//                         connection.end();
-//                     }
-//                 });
-//             });
-//         }
-//     }
-//     this.writeLog = function (json) {
-//         let str = JSON.stringify(json);
-//         fs.appendFileSync("./log.txt", str + '\n');
-//     };
-//     this.start=function(){
-//         this.getNewsByApi('top',this.setDateIntoMysql);
-//         this.getNewsByApi('keji',this.setDateIntoMysql);
-//         this.getNewsByApi('tiyu',this.setDateIntoMysql);
-//         setInterval(()=> {
-//             getNewsByApi('top',this.setDateIntoMysql);
-//         }, 3600000* 0.5) //每半小时   
-//         setInterval(()=> {
-//             getNewsByApi('keji',this.setDateIntoMysql);
-//             getNewsByApi('tiyu',this.setDateIntoMysql);
-//         }, 3600000* 2) //每两小时
-//     }
-// }
 
 //1.根据聚合数据api爬取实时数据
 function getNewsByApi(type, callback) {
     let pageUrl = baseURL + type;
     let str = `\n${new Date} 执行爬取操作\n`
     fs.appendFileSync("./log.txt", str)
-    console.log(str)
     http.get(pageUrl, function (res) {
         let html = ''; //这是源数据
         res.on('data', function (data) {
