@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <title>下拉框表单联动</title>
+</head>
+
+<body>
+    
+    <input id="ipt" list="browsers" placeholder="输入城市">
+    <datalist id="browsers">
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+    <script>
+        $('#ipt').on('keyup',function(e){
+            var v = $(this).val();
+            console.log(v);
+            $('#browsers').append('<option value="'+v+v+'">');
+        })
+    </script>
+
+</body>
+
+</html>
