@@ -13,8 +13,6 @@ const axios = require('axios');
 // expresspost中间件
 //发送回调信息
 
-
-
 // sendMsg('主人服务器API接口启动啦~'+new Date())
 
 app.use(bodyParser.json()); //获取post的data
@@ -69,6 +67,20 @@ app.get("/api/getNews", (req, res) => {
         res.send('请登录')
     }
 });
+app.get("/api/getWeiBo",(req,res)=>{
+    let t = new Date();
+    //查最新的排名
+    let selectByTop = 'SELECT * FROMw_top WHERE time = (SELECT time FROM w_top ORDER BY id DESC LIMIT 1) ORDER BY rank;';
+    sql(DB_CONFIG,selectByTop)
+    .then(data=>{
+        res.send(data)
+    })
+    .catch(err=>{
+        res.send(err)
+    })
+    //根据标题查
+    let selectByTitle = `SELECT * FROM w_top WHERE title = '${title}' ORDER BY time; `
+});
 app.post("/api/register", (req, res) => {
     //判断重复用的函数
     if (req.body.type == "isRepeat") {
@@ -120,6 +132,7 @@ app.post('/api/test', (req, res) => {
         console.log('无效')
     }
 });
+
 
 function getNewsFromSql(query) {
     let {
@@ -278,6 +291,7 @@ function sendMsg(msg) {
     var msg = encodeURI(msg);
     axios.get('https://sc.ftqq.com/SCU36847T91a389aca957b1bf554b2e728328d1185c029f702c10b.send?text=' + msg);
 }
+// sql(DB_CONFIG,"SELECT * FROM `w_top` WHERE time BETWEEN '2019-01-9 17:00:00' and '2019-01-9 17:30:00' GROUP BY time")
 
 function sql(DB_CONFIG, sql, val) {
     return new Promise(function (resolve, reject) {
@@ -296,6 +310,7 @@ function sql(DB_CONFIG, sql, val) {
         });
     })
 }
+
 sql(DB_CONFIG,'select * from user_info')
 .then(res=>{
     console.log(res)
