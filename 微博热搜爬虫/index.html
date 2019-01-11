@@ -6,56 +6,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="js/echarts.simple.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.5.21/vue.js"></script>
     <script src="//soft.jiegeng.com/static/js/jquery.min.js"></script>
     <title>Document</title>
 </head>
 
 <body>
     <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
-    <div id="main" style="width: 1900px;height:500px;"></div>
+    <div id="app">
+        <div id="main" style="width: 1900px;height:500px;"></div>
+    </div>
     <script>
-        var myChart = echarts.init(document.getElementById('main'));
-
-        // 指定图表的配置项和数据
-        var option = {
-            title: {
-                text: '今日热点'
-            },
-            tooltip: {},
-            legend: {
-                data: ['销量']
-            },
-            xAxis: {
-                data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
-                axisLabel: {
-                    interval: 0,
-                    formatter: function (value) {
-                        return value.split("").join("\n");
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                myChart: echarts.init(document.getElementById('main')),
+                option: {
+                    title: {
+                        text: '今日热点'
+                    },
+                    tooltip: {},
+                    legend: {
+                        data: ['销量']
+                    },
+                    xAxis: {
+                        data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
+                        axisLabel: {
+                            interval: 0,
+                            rotate: 40
+                        }
+                    },
+                    yAxis: {},
+                    series: [{
+                        name: '数量',
+                        type: 'line',
+                        data: [5, 20, 36, 10, 10, 20]
                     }
+                    ]
                 }
             },
-            yAxis: {},
-            series: [{
-                name: '数量',
-                type: 'line',
-                data: [5, 20, 36, 10, 10, 20]
+
+            watch: {
+                option() {
+                    this.myChart.setOption(option);
+                }
+            },
+            methods: {
+                getD() {
+                    let that = this;
+                    $.ajax({
+                        method: 'get',
+                        url: 'https://api.nnnnzs.cn/api/getweibo',
+                        success: function (res) {
+                            that.option.xAxis.data = [];
+                            that.option.series[0].data = [];
+                            res.forEach(ele => {
+                                that.option.xAxis.data.push(ele.title);
+                                that.option.series[0].data.push(ele.num);
+                            });
+                            that.myChart.setOption(that.option);
+                        }
+                    });
+                }
             }
-        ]
-        };
-        $.ajax({
-            method: 'get',
-            url: 'https://api.nnnnzs.cn/api/getweibo',
-            success: function (res) {
-                console.log(res)
-                option.xAxis.data = [];
-                option.series[0].data = [];
-                res.forEach(ele => {
-                    option.xAxis.data.push(ele.title);
-                    option.series[0].data.push(ele.num);
-                });
-                myChart.setOption(option);
-            }
-        })
+        });
+        console.log(vm)
+        // var myChart = echarts.init(document.getElementById('main'));
+        // 指定图表的配置项和数据
+        // var option = {
+        //     title: {
+        //         text: '今日热点'
+        //     },
+        //     tooltip: {},
+        //     legend: {
+        //         data: ['销量']
+        //     },
+        //     xAxis: {
+        //         data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
+        //         axisLabel: {
+        //             interval: 0,
+        //             rotate: 40
+        //         }
+        //     },
+        //     yAxis: {},
+        //     series: [{
+        //         name: '数量',
+        //         type: 'line',
+        //         data: [5, 20, 36, 10, 10, 20]
+        //     }
+        //     ]
+        // };
+        // $.ajax({
+        //     method: 'get',
+        //     url: 'https://api.nnnnzs.cn/api/getweibo',
+        //     success: function (res) {
+        //         option.xAxis.data = [];
+        //         option.series[0].data = [];
+        //         res.forEach(ele => {
+        //             option.xAxis.data.push(ele.title);
+        //             option.series[0].data.push(ele.num);
+        //         });
+        //         myChart.setOption(option);
+        //     }
+        // });
     </script>
 </body>
 
