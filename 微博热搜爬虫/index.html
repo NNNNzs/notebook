@@ -17,98 +17,104 @@
         <div id="main" style="width: 1900px;height:500px;"></div>
     </div>
     <script>
-        let vm = new Vue({
-            el: '#app',
-            data: {
-                myChart: echarts.init(document.getElementById('main')),
-                option: {
-                    title: {
-                        text: '今日热点'
-                    },
-                    tooltip: {},
-                    legend: {
-                        data: ['销量']
-                    },
-                    xAxis: {
-                        data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
-                        axisLabel: {
-                            interval: 0,
-                            rotate: 40
-                        }
-                    },
-                    yAxis: {},
-                    series: [{
-                        name: '数量',
-                        type: 'line',
-                        data: [5, 20, 36, 10, 10, 20]
-                    }
-                    ]
-                }
-            },
-
-            watch: {
-                option() {
-                    this.myChart.setOption(option);
-                }
-            },
-            methods: {
-                getD() {
-                    let that = this;
-                    $.ajax({
-                        method: 'get',
-                        url: 'https://api.nnnnzs.cn/api/getweibo',
-                        success: function (res) {
-                            that.option.xAxis.data = [];
-                            that.option.series[0].data = [];
-                            res.forEach(ele => {
-                                that.option.xAxis.data.push(ele.title);
-                                that.option.series[0].data.push(ele.num);
-                            });
-                            that.myChart.setOption(that.option);
-                        }
-                    });
-                }
-            }
-        });
-        console.log(vm)
-        // var myChart = echarts.init(document.getElementById('main'));
-        // 指定图表的配置项和数据
-        // var option = {
-        //     title: {
-        //         text: '今日热点'
-        //     },
-        //     tooltip: {},
-        //     legend: {
-        //         data: ['销量']
-        //     },
-        //     xAxis: {
-        //         data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
-        //         axisLabel: {
-        //             interval: 0,
-        //             rotate: 40
+        // let vm = new Vue({
+        //     el: '#app',
+        //     data: {
+        //         myChart: echarts.init(document.getElementById('main')),
+        //         option: {
+        //             title: {
+        //                 text: '今日热点'
+        //             },
+        //             tooltip: {},
+        //             legend: {
+        //                 data: ['销量']
+        //             },
+        //             xAxis: {
+        //                 data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
+        //                 axisLabel: {
+        //                     interval: 0,
+        //                     rotate: 40
+        //                 }
+        //             },
+        //             yAxis: {},
+        //             series: [{
+        //                 name: '数量',
+        //                 type: 'line',
+        //                 data: [5, 20, 36, 10, 10, 20]
+        //             }
+        //             ]
         //         }
         //     },
-        //     yAxis: {},
-        //     series: [{
-        //         name: '数量',
-        //         type: 'line',
-        //         data: [5, 20, 36, 10, 10, 20]
-        //     }
-        //     ]
-        // };
-        // $.ajax({
-        //     method: 'get',
-        //     url: 'https://api.nnnnzs.cn/api/getweibo',
-        //     success: function (res) {
-        //         option.xAxis.data = [];
-        //         option.series[0].data = [];
-        //         res.forEach(ele => {
-        //             option.xAxis.data.push(ele.title);
-        //             option.series[0].data.push(ele.num);
-        //         });
-        //         myChart.setOption(option);
+
+        //     watch: {
+        //         option() {
+        //             this.myChart.setOption(option);
+        //         }
+        //     },
+        //     methods: {
+        //         getD() {
+        //             let that = this;
+        //             $.ajax({
+        //                 method: 'get',
+        //                 url: 'https://api.nnnnzs.cn/api/getweibo',
+        //                 success: function (res) {
+        //                     that.option.xAxis.data = [];
+        //                     that.option.series[0].data = [];
+        //                     res.forEach(ele => {
+        //                         that.option.xAxis.data.push(ele.title);
+        //                         that.option.series[0].data.push(ele.num);
+        //                     });
+        //                     that.myChart.setOption(that.option);
+        //                 }
+        //             });
+        //         }
         //     }
         // });
+        // console.log(vm)
+        var myChart = echarts.init(document.getElementById('main'));
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '今日热点'
+            },
+            tooltip: {},
+            legend: {
+                data: ['销量']
+            },
+            xAxis: {
+                data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
+                axisLabel: {
+                    interval: 0,
+                    rotate: 40
+                }
+            },
+            yAxis: {},
+            series: [{
+                name: '数量',
+                type: 'line',
+                data: [5, 20, 36, 10, 10, 20]
+            },{name: '呵呵',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]}
+            ]
+        };
+        $.ajax({
+            method: 'get',
+            url: 'http://localhost:3001/api/getweibo?title=陈意涵的肚子在哪里',
+            success: function (res) {
+                option.xAxis.data = [];//x轴
+                option.series[0].data = [];//数据
+                option.series[1].data = [];//数据
+                res.forEach(ele => {
+                    let time = new Date(ele.time).getHours();
+                    // option.xAxis.data.push(time);
+                    option.series[0].data.push(ele.num);
+                    option.series[1].data.push(ele.rank);
+                });
+                console.log(option.series[1].data)
+                myChart.setOption(option);
+            }
+        });
     </script>
 </body>
 

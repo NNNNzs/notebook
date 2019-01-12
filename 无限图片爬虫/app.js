@@ -10,6 +10,7 @@ let Num = 0;
 
 //首先根据页面抓到a标签和img标签
 
+//1、抓取到页面的源码
 function getContent(url) {
     let myURL = new URL(url);
     let myhttp = myURL.protocol == 'http' ? http : https;
@@ -28,22 +29,27 @@ function getContent(url) {
     })
 };
 
+//根据html源码抓取图片src列表和a标签href
+function getSrcList(html) {
+    // console.log(baseUrl)
+    let $ = cheerio.load(html, {
+        ignoreWhitespace: true,
+        decodeEntities: false,
+    });
+    let imgList = [];
+    for (let i = 0; i < $('img').length; i++) {
+        let src = $('img').eq(i).attr('src');
+        if (src) {
+            //todo 根据有没有协议号判断 判断是相对路径还是绝对路径
+            imgList.push($('img').eq(i).attr('src'));
+        }
+    };
+    console.log(imgList)
+}
+
 getContent(baseUrl)
     .then(html => {
-        console.log(baseUrl)
-        let $ = cheerio.load(html, {
-            ignoreWhitespace: true,
-            decodeEntities: false,
-        });
-        let imgList = [];
-        for (let i = 0; i < $('img').length; i++) {
-            let src = $('img').eq(i).attr('src');
-            if (src) {
-                //todo 根据有没有协议号判断 判断是相对路径还是绝对路径
-                imgList.push($('img').eq(i).attr('src'));
-            }
-        };
-        // console.log(imgList)
+        getSrcList(html)
     })
     .catch(err => {
         console.log(err)

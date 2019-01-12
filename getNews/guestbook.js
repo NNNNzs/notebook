@@ -7,7 +7,12 @@ const cookieParser = require("cookie-parser"); //获取cookie
 const busboy = require("connect-busboy"); //文件上传
 const session = require('express-session'); //会话
 const app = express();
-const DB_CONFIG = require('./sql.json')
+const DB_CONFIG = {
+    host: 'api.nnnnzs.cn',
+    user: 'newslist',
+    password: '123456ni',
+    database: 'newslist'
+};
 const axios = require('axios');
 
 // expresspost中间件
@@ -67,19 +72,33 @@ app.get("/api/getNews", (req, res) => {
         res.send('请登录')
     }
 });
-app.get("/api/getWeiBo",(req,res)=>{
-    let t = new Date();
-    //查最新的排名
-    let selectByTop = 'SELECT * FROMw_top WHERE time = (SELECT time FROM w_top ORDER BY id DESC LIMIT 1) ORDER BY rank;';
-    sql(DB_CONFIG,selectByTop)
-    .then(data=>{
-        res.send(data)
-    })
-    .catch(err=>{
-        res.send(err)
-    })
+app.get("/api/getWeiBo", (req, res) => {
+    if (req.query.title) {
+        let title = req.query.title;
+        let selectByTitle = `SELECT * FROM w_top WHERE title = '${title}' ORDER BY time; `
+        sql(DB_CONFIG, selectByTitle)
+            .then(data => {
+                res.send(data)
+            })
+            .catch(err => {
+                res.send(err)
+            })
+    }
+    else {
+        let t = new Date();
+        //查最新的排名
+        let selectByTop = 'SELECT * FROM w_top WHERE time = (SELECT time FROM w_top ORDER BY id DESC LIMIT 1) ORDER BY rank;';
+        sql(DB_CONFIG, selectByTop)
+            .then(data => {
+                res.send(data)
+            })
+            .catch(err => {
+                res.send(err)
+            })
+    }
+
     //根据标题查
-    let selectByTitle = `SELECT * FROM w_top WHERE title = '${title}' ORDER BY time; `
+
 });
 app.post("/api/register", (req, res) => {
     //判断重复用的函数
@@ -99,10 +118,10 @@ app.post("/api/register", (req, res) => {
                     user.registered_ip = 'localhost';
                     user.registered_time = new Date();
                     // res.send(user)
-                    console.log(user)
+                    // console.log(user)
                     register(user)
                         .then(data => {
-                            console.log(data)
+                            // console.log(data)
                             res.send(data)
                         })
                         .catch(err => res.send(err))
@@ -143,9 +162,9 @@ function getNewsFromSql(query) {
         let sqlQuery;
         connection.connect();
         if (keywords) {
-            sqlQuery = `SELECT * FROM newslist where title like '%${keywords}%' or guide like '%${keywords}%' ORDER BY date DESC limit ${(page-1)*30},30`;
+            sqlQuery = `SELECT * FROM newslist where title like '%${keywords}%' or guide like '%${keywords}%' ORDER BY date DESC limit ${(page - 1) * 30},30`;
         } else {
-            sqlQuery = `SELECT * FROM newslist WHERE category='${type}' ORDER BY date DESC limit ${(page-1)*30},30`;
+            sqlQuery = `SELECT * FROM newslist WHERE category='${type}' ORDER BY date DESC limit ${(page - 1) * 30},30`;
         }
         connection.query(sqlQuery, function (error, results, fields) {
             if (error) {
@@ -311,13 +330,13 @@ function sql(DB_CONFIG, sql, val) {
     })
 }
 
-sql(DB_CONFIG,'select * from user_info')
-.then(res=>{
-    console.log(res)
-})
-.catch(err=>{
-    console.log(err)
-})
+// sql(DB_CONFIG, 'select * from user_info')
+//     .then(res => {
+//         console.log(res)
+//     })
+//     .catch(err => {
+//         console.log(err)
+//     })
 
 //创建服务
 var httpServer = http.createServer(app);
