@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            
+            }
+        #canvas{
+            padding: 0;
+            margin: 0;
+            position: fixed;
+            z-index: -1;
+            /* overflow: hidden; */
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+</body>
+<script>
+    window.onload = starCanvas;
+    window.onresize = starCanvas;
+    function starCanvas() {
+        
+    function e(e, t) {
+        if (arguments.length < 2 && (t = e, e = 0), e > t) {
+            var n = t;
+            t = e, e = n
+        }
+        return Math.floor(Math.random() * (t - e + 1)) + e
+    }
+    function t(e, t) {
+        var n = Math.max(e, t),
+            r = Math.round(Math.sqrt(n * n + n * n));
+        return r / 3
+    }
+    function n() {
+        o.globalCompositeOperation = "source-over", o.globalAlpha = .5, o.fillStyle = "hsla(" + l + ", 64%, 6%, 2)", o.fillRect(
+            0, 0, a, s), o.globalCompositeOperation = "lighter";
+        for (var e = 1, t = u.length; e < t; e++) u[e].draw();
+        window.requestAnimationFrame(n)
+    }
+    var r, i = document.getElementById("canvas"),
+        o = i.getContext("2d"),
+        a = i.width = window.innerWidth,
+        s = i.height = window.innerHeight,
+        l = 217,
+        u = [],
+        c = 0;
+    r = $(window).height() < 900 ? 300 : 500;
+    var f = document.createElement("canvas"),
+        p = f.getContext("2d");
+    f.width = 100, f.height = 100;
+    var d = f.width / 2,
+        h = p.createRadialGradient(d, d, 0, d, d, d);
+    h.addColorStop(.025, "#CCC"), h.addColorStop(.1, "hsl(" + l + ", 61%, 33%)"), h.addColorStop(.25, "hsl(" + l +
+        ", 64%, 6%)"), h.addColorStop(1, "transparent"), p.fillStyle = h, p.beginPath(), p.arc(d, d, d, 0, 2 * Math.PI),
+        p.fill();
+    var g = function () {
+        this.orbitRadius = e(t(a, s)), this.radius = e(2, 200) / 8, this.orbitX = a / 2, this.orbitY = s / 2, this.timePassed =
+            e(0, r), this.speed = e(this.orbitRadius) / 1e5, this.alpha = e(2, 10) / 10, c++, u[c] = this
+    };
+    g.prototype.draw = function () {
+        var t = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX,
+            n = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY,
+            r = e(10);
+        1 === r && this.alpha > 0 ? this.alpha -= .05 : 2 === r && this.alpha < 1 && (this.alpha += .05), o.globalAlpha =
+            this.alpha, o.drawImage(f, t - this.radius / 2, n - this.radius / 2, this.radius, this.radius), this.timePassed +=
+            this.speed
+    };
+    for (var m = 0; m < r; m++) new g;
+    n()
+}
+</script>
+</html>

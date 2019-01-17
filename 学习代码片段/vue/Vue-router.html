@@ -1,0 +1,65 @@
+<div id="app">
+    <router-link to="/入口地址">a标签内容</router-link>
+    <router-view name="sidebar"></router-view>
+    <router-view name="content"></router-view>
+</div>
+
+<script>
+var routers = [{//路由配置
+        path:"/入口地址/:key1?key1",
+        meta:{login:true},//当router的login值为true才能访问
+        component:{
+            template:`
+        <div>
+            <p>{{$route.params.key1}}</p>//通过:name方式
+            <p>{{$route.query.key2}}</p>//query是通过get方式获取
+            <router-link to="more" append>更多信息</router-link>
+            <router-view></router-view>
+        </div>
+        `,
+        data:function(){return},
+        },
+        components:{//选择不同的视图
+            sidebar:{
+                template:'<div>...</div>'
+            },
+            content:{
+                template:'<div>...</div>'
+            }
+        },
+        children:[//子路由,在routers配置里
+        {
+            path:'/more',
+            component:{
+                template:`
+                <div>
+                    {{route.params.key}}
+                </div>`
+            }
+        }
+        ]
+    },
+];
+var router = new VueRouter({
+    routes:routes,//把路由配置绑定到路由
+})
+router.beforeEach(function(to,from,next){//跳转页面前
+    console.log('to.matched:',to.matched);//匹配了的路由
+    console.log('to.path:',to.path);//匹配最后的路由
+    if(!logged_in && to.matched.some(function(item){
+        return item.path =='/post'
+    }))
+    dosomething
+
+
+})
+var vm = new Vue({
+    el:"#app",
+    router:router,//把路由实例绑定到Vue实例
+    methods:{
+        setHash:function(){
+            window.router.push('/user/小明/')
+        }
+    }
+})
+</script>
