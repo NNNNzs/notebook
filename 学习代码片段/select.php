@@ -1,1 +1,0 @@
-sql = "sql downurl from soft_soft_data where newdownurl=|"

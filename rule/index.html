@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.4.0/css/bootstrap.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.4.0/js/bootstrap.js"></script>
+    <link href="https://cdn.bootcss.com/bootstrap-treeview/1.2.0/bootstrap-treeview.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/bootstrap-treeview/1.2.0/bootstrap-treeview.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="tree">
+    </div>
+    <script>
+        function getTree() {
+            // Some logic to retrieve, or generate tree structure
+            return data;
+        }
+        var tree2 = [{
+            text: '经理',
+            nodes: [{
+                text: '吕兆龙',
+            },
+            {
+                text: '周慧',
+            },
+            {
+                text: '夏静',
+            }]
+        },
+        {
+            text: '业务部',
+            nodes: [{
+                text: '市场',
+            },
+            {
+                text: '销售',
+            },
+            {
+                text: '营销',
+            }]
+        }, {
+            text: '研发部',
+            nodes: [{
+                text: '吕兆龙',
+            }, {
+                text: '开发部',
+                nodes: [{
+                    text: '汪黛玉',
+                },
+                {
+                    text: '倪宗山',
+                }]
+            },
+            {
+                text: '运营部',
+            },
+            {
+                text: '测试部',
+            },
+            {
+                text: '产品研发部',
+            }]
+        }, {
+            text: '综合部',
+            nodes: [{
+                text: '人力资源',
+            },
+            {
+                text: '研究室',
+            }]
+        }, {
+            text: '研究室',
+            nodes: [{
+                text: '左庆',
+            },
+            {
+                text: '张成敏',
+            }]
+        }
+        ]
+        $('#tree').treeview({
+            data: tree2,
+            levels: 2,
+            multiSelect: true,
+            showCheckbox: true,
+            evels: 1,
+            selectedBackColor: '#fff',//清空select的颜色,假装没有这个事件
+            selectedColor: '#000',//同上
+            onNodeSelected: function (event, data) {
+                //还有子节点,选择展开
+                if (data.nodes) {
+                    $(this).treeview('expandNode', [data.nodeId, { silent: true }]);
+                }//没有子节点，checkNode
+                else {
+                    var parent = $(this).treeview('getNode', data.parentId);
+                    console.log(parent)
+                    // s.nodes.forEach(function(e){
+                    //     e.state.checked
+                    // })
+                    $(this).treeview('checkNode', [data.nodeId, { silent: true }]);
+                }
+            },
+            onNodeUnselected: function (event, data) {
+                $(this).treeview('collapseNode', [data.nodeId, { silent: true }]);
+                $(this).treeview('uncheckNode', [data.nodeId, { silent: true }]);
+            }
+
+        });
+        //收起所有折叠
+        $('#tree').treeview('collapseAll', { silent: true });
+
+        $('#tree').on('nodeChecked', function (event, data) {
+            checkedChildren(event, data, $(this));
+            // checkedParent()
+        });
+        $('#tree').on('nodeUnchecked', function (event, data) {
+            unCheckedChildren(event, data, $(this));
+            // unCheckParent()
+        })
+
+        function getCheckedPerson($ele=$('#tree')) {
+            //所有被选择的节点
+            var arr = $ele.treeview('getChecked');
+            if (!arr) return;
+            var names = [];
+            //返回没有子节点的节点名称
+            arr.forEach(e => {
+                if (!e.nodes)
+                    names.push(e.text)
+            })
+            //排重
+            names = Array.from(new Set(names))
+            return names;
+        }
+        function getCheckedGroup($ele=$('#tree')) {
+            var arr = $ele.treeview('getChecked');
+            if (!arr) return;
+            var names = [];
+            //返回没有子节点的节点名称
+            arr.forEach(e => {
+                if (e.nodes)
+                    names.push(e.text)
+            })
+            var group = Array.from(new Set(names))
+            return group;
+        }
+        function checkedChildren(event, data, ele) {
+            //如果选中了
+            if (data.nodes) {
+                data.nodes.forEach(function (element) {
+                    ele.treeview('checkNode', [element.nodeId, { silent: true }]);
+                    if (element.nodes) {
+                        checkedChildren(event, element, ele);
+                    }
+                    else return
+                })
+            }
+            else return
+        }
+        
+        function unCheckedChildren(event, data, ele) {
+            if (data.nodes) {
+                data.nodes.forEach(function (element) {
+                    ele.treeview('uncheckNode', [element.nodeId, { silent: true }]);
+                    if (element.nodes) {
+                        unCheckedChildren(event, element, ele);
+                    }
+                    else return
+                })
+            }
+            else return
+        }
+
+    </script>
+</body>
+
+</html>

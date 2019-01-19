@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    
+
     <input id="ipt" list="browsers" placeholder="输入城市">
     <datalist id="browsers">
         <option value="Internet Explorer">
@@ -19,11 +19,29 @@
         <option value="Opera">
         <option value="Safari">
     </datalist>
+
+    <input id="select1" placeholder="输入城市">
+    <select id="select" multiple="multiple" style="width:200px;height:200px;">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="opel">Opel</option>
+        <option value="audi">Audi</option>
+    </select>
+
     <script>
-        $('#ipt').on('keyup',function(e){
+        $('#ipt').on('keyup', function (e) {
             var v = $(this).val();
             console.log(v);
-            $('#browsers').append('<option value="'+v+v+'">');
+            $('#browsers').append('<option value="' + v + v + '">');
+        })
+        $('#select1').on('keyup', function(e) {
+            if(e.keyCode==13){
+                $('#select option:selected').each(function(index,ele){
+                    console.log($(ele).val())
+                })
+            }
+            var v = $(this).val().trim();
+            $('#select').append('<option value="'+v+'">'+v+'</option>');
         })
     </script>
 
