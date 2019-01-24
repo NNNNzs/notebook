@@ -1,0 +1,53 @@
+
+.content-wrapper ivu-table th{	
+	background-color: #0062c6   !important;
+	color: #fff !important;
+}
+
+/**状态前面小圆点样式*/
+.content-wrapper .red-cir {
+	width: 11px;
+	height: 11px;
+	display: inline-block;
+	background: #e74c3c;
+	border-radius: 50% 50%;
+	margin-right: 5px;
+}
+
+.content-wrapper .green-cir {
+	width: 11px;
+	height: 11px;
+	display: inline-block;
+	background: #19be6b;
+	border-radius: 50% 50%;
+	margin-right: 5px;
+}
+
+.content-wrapper .ivu-dropdown-item{
+	transition: unset !important;
+}
+.content-wrapper .ivu-dropdown-item:hover {
+	background: #008CEE !important;
+	color:#fff !important;
+}
+
+.content-wrapper .ivu-dropdown-item .ivu-select-item{
+	transition: unset !important;
+}
+.content-wrapper .ivu-dropdown-item .ivu-select-item:hover {
+	background: #008CEE !important;
+	color:#fff !important;
+}	
+.content-wrapper .ivu-dropdown-item .ivu-select-item-focus{
+	background: #fff !important;
+	color:#008CEE !important;
+	font-weight:bold;
+}
+
+.dd-menu .ivu-dropdown-item{
+	transition: unset !important;
+}
+.dd-menu .ivu-dropdown-item:hover {
+	background: #008CEE !important;
+	color:#fff !important;
+}

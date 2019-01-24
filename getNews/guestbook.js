@@ -18,7 +18,7 @@ const axios = require('axios');
 // expresspost中间件
 //发送回调信息
 
-// sendMsg('主人服务器API接口启动啦~'+new Date())
+// sendMsg('主人本地服务器API接口启动啦~'+new Date())
 
 app.use(bodyParser.json()); //获取post的data
 app.use(cookieParser()); //获取cookie
@@ -29,20 +29,29 @@ app.use( //获取post的data
     })
 );
 app.use(session({
-    //这里的name指是cookie的name
-    name: 'Nz_session',
-    secret: 'keyboard cat',
-    cookie: ('name', 'value', {
-        path: '/',
-        httpOnly: true,
-        secure: false,
-        maxAge: 3600000 / 60 //1分钟
-    }),
-    //重新保存：强制会话保存即使是未修改的。默认为true但是得写上
-    resave: true,
-    //强制“未初始化”的会话保存到存储。 
-    saveUninitialized: true,
-}))
+    secret :  'secret', // 对session id 相关的cookie 进行签名
+    resave : true,
+    saveUninitialized: false, // 是否保存未初始化的会话
+    cookie : {
+        maxAge : 1000 * 60 * 3, // 设置 session 的有效时间，单位毫秒
+    },
+}));
+// app.use(session({
+//     //这里的name指是cookie的name
+//     name: 'Nz_session',
+//     secret: 'keyboard cat',
+//     cookie: ('name', 'value', {
+//         path: '/',
+//         httpOnly: true,
+//         secure: false,
+//         maxAge: 3600000 / 60 //1分钟
+//     }),
+//     saveUninitialized: false, // 是否保存未初始化的会话
+//     //重新保存：强制会话保存即使是未修改的。默认为true但是得写上
+//     // resave: true,
+//     //强制“未初始化”的会话保存到存储。 
+//     // saveUninitialized: true,
+// }))
 
 //路由
 //拦截所有请求
@@ -144,11 +153,20 @@ app.post("/api/login", (req, res) => {
         })
         .catch(error => res.send(error))
 });
+
 app.post('/api/test', (req, res) => {
+    let sess = req.session;
+    if(sess){console.log(sess)} 
+    // res.send();
     if (req.session.userName) { //判断session 状态，如果有效，则返回主页，否则转到登录页面
+        console.log(req.session.userName)
         console.log('有效')
+        res.send('1');
     } else {
+        req.session.userName = Math.random();
+        console.log(req.session);
         console.log('无效')
+        res.send('没有登录哦')
     }
 });
 

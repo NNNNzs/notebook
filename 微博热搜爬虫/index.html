@@ -100,14 +100,14 @@
         };
         $.ajax({
             method: 'get',
-            url: 'http://localhost:3001/api/getweibo?title=秦昊',
+            url: 'http://api.nnnnzs.cn:3001/api/getweibo',
             success: function (res) {
                 option.xAxis.data = [];//x轴
                 option.series[0].data = [];//数据
                 option.series[1].data = [];//数据
                 res.forEach(ele => {
-                    let time = new Date(ele.time).getHours();
-                    option.xAxis.data.push(time);
+                    // let time = new Date(ele.time).getHours();
+                    option.xAxis.data.push(ele.title);
                     option.series[0].data.push(ele.num);
                     // option.series[1].data.push(ele.rank);
                 });
