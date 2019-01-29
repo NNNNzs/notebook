@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://soft.jiegeng.com/static/js/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input type="file" id="pic" multiple accept="image/png,image/jpeg,image/gif,image/jpg"> -->
+    <input type="file" name="file" id="fileUpload" multiple onchange="showPreview(this)">
+    <div id="imglist">
+
+    </div>
+    <img id="portrait" src="" style="display:none;" />
+    <script>
+        // $("#fileUpload").change(function () {
+        //     let l = $("#fileUpload")[0].files.length//上传文件的个数
+        //     console.log($("#fileUpload")[0].files);
+            
+        // });
+
+        function showPreview(source) {
+            var file = source.files[0];
+            // var portrait = document.getElementById('portrait');
+            if (window.FileReader) {
+                var fr = new FileReader();
+                let l = fr.length
+                fr.onloadend = function (e) {
+                    console.log(e)
+                    // portrait.src = e.target.result;
+                    // console.log(e.target.result)
+                    $('#imglist').append('<img src="'+ e.target.result+'">');
+                };
+                fr.readAsDataURL(file);
+                // portrait.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -12,7 +12,7 @@ const sqlConfig = {
 
 getHot1(url, formatData1(html, setArrToDB1(arr)))
 
-getHot1(url,formatData1(html,function(arr){
+getHot1(url, formatData1(html, function (arr) {
     arr.forEach((ele, index, arr) => {
         let connection = mysql.createConnection(sqlConfig)
         connection.connect();
@@ -111,7 +111,15 @@ function getHot(url) {
 
 
 
-
+getHot()
+    .then(date => {
+        formatData(date)
+    })
+    .then(
+        data => {
+            setArrToDB(data)
+        }
+    )
 
 function formatData(html) {
     return new Promise((resolve, reject) => {
