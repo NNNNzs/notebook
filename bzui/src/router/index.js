@@ -38,7 +38,7 @@ router.beforeEach((to, from, next) => {
     })
   } else {
     next()
-    //下面这部分先注释掉，权限暂时用不到
+    //下面这部分先注释掉，权限和getUserInof暂时用不到
     // if (store.state.user.hasGetInfo) {
     //   turnTo(to, store.state.user.access, next)
     // } else {

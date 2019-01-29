@@ -39,7 +39,8 @@ export default {
           if (data.data.code == 200) {
             localStorage.username = data.data.nickname;
             localStorage.token = data.data.token;
-            me.$store.state.loginStat = data.data;
+            //存到Vuex的登录里
+            me.handleLogin({userName:data.data.username,password:data.data.password})
             me.$Notice.success({
               title: data.data.message,
               duration: 1

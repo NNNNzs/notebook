@@ -6,7 +6,7 @@ export const login = ({ userName, password }) => {
     password
   }
   return axios.request({
-    url:'http://192.168.15.54:8080/Xunrar/login',
+    url:'http://sc.94rp.com/bzDCP/login',
     data:$qs.stringify(data),
     method: 'post'
   })
