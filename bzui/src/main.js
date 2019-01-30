@@ -17,6 +17,7 @@ import axios from 'axios'
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 axios.defaults.withCredentials = true
 
+
 Vue.prototype.$axios = axios
 window.$qs = qs//写在全局变量里面了
 // 实际打包时应该不引入mock
@@ -44,10 +45,32 @@ Vue.prototype.$config = config
 importDirective(Vue)
 
 /* eslint-disable no-new */
-new Vue({
+const vm = new Vue({
   el: '#app',
   router,
   i18n,
   store,
   render: h => h(App)
 })
+
+
+//axios拦截器,用于对session过期跳转到登录页面
+vm.$axios.interceptors.response.use(function (response) {
+  // 拦截未登录，跳转到登录页面
+  if(response.data.message=='未登录'){
+    vm.$Notice.warning({
+      title:'登录过期请重新登录',
+      duration: 1,
+    });
+    //清除本地token
+    localStorage.token=''
+    vm.$router.push({
+      name:'login'
+    })
+    return response
+  }
+  return response;
+}, function (error) {
+  // 对响应错误做点什么
+  return Promise.reject(error);
+});

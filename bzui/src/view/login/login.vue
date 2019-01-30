@@ -29,7 +29,7 @@ export default {
       let me = this;
       this.$axios
         .post(
-          "http://sc.94rp.com/bzDCP/login",
+          "http://47.92.36.247:8080/Xunrar/login",
           $qs.stringify({
             username: userName,
             password: password

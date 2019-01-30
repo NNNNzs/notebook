@@ -1,7 +1,7 @@
 <template>
   <Form ref="loginForm" :model="form" :rules="rules" @keydown.enter.native="handleSubmit">
-    <FormItem prop="userName">
-      <Input v-model="form.userName" placeholder="请输入用户名">
+    <FormItem prop="userName" autocomplete="on">
+      <Input  autocomplete="on" v-model="form.userName" placeholder="请输入用户名">
         <span slot="prepend">
           <Icon :size="16" type="ios-person"></Icon>
         </span>
@@ -43,7 +43,7 @@ export default {
   data () {
     return {
       form: {
-        userName: 'nizongshan',
+        userName: '',
         password: ''
       }
     }
