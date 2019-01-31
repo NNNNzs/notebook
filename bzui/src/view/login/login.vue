@@ -8,7 +8,7 @@
       <Card icon="log-in" title="欢迎登录" :bordered="false">
         <div class="form-con">
           <login-form @on-success-valid="handleSubmit"></login-form>
-          <p class="login-tip">输入任意用户名和密码即可</p>
+          <!-- <p class="login-tip">输入任意用户名和密码即可</p> -->
         </div>
       </Card>
     </div>
@@ -29,7 +29,7 @@ export default {
       let me = this;
       this.$axios
         .post(
-          "http://47.92.36.247:8080/Xunrar/login",
+          "http://adm.xunrar.com:8080/Xunrar/login",
           $qs.stringify({
             username: userName,
             password: password

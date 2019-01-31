@@ -155,7 +155,7 @@ export default {
         targetVersionUrl: targetVersionUrl
       };
       this.$axios({
-        url: "http://47.92.36.247:8080/Xunrar/config/md5",
+        url: "http://adm.xunrar.com:8080/Xunrar/config/md5",
         data: $qs.stringify(sendDate, { indices: false }),
         method: "post"
       })
@@ -187,7 +187,7 @@ export default {
         updatePoint: this.updatePoint //数组
       };
       this.$axios({
-        url: "http://47.92.36.247:8080/Xunrar/upgrade/config",
+        url: "http://adm.xunrar.com:8080/Xunrar/upgrade/config",
         data: $qs.stringify(sendDate, { indices: false }),
         method: "post",
         indices: false
