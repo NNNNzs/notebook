@@ -57,6 +57,7 @@ app.use(session({
 //拦截所有请求
 app.all("*", function (req, res, next) {
     // let ip = req.ip.match(/\d+\.\d+\.\d+\.\d+/)[0];
+    console.log(req.ip)
     // res.header("Access-Control-Allow-Origin", "https://me.nnnnzs.cn");//正式服
     res.header("Access-Control-Allow-Origin", req.headers.origin); //把来路域名设为可以跨域
     res.header("Access-Control-Allow-Methods", "PUT, GET, POST, DELETE, OPTIONS");
