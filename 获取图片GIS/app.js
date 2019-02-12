@@ -1,23 +1,22 @@
 const fs = require('fs');
 var ExifImage = require('exif').ExifImage
 
-
-
-
-async function stream(src){
+async function stream(src) {
     let imgArray = await readDir(src);
-    let imgs =[]
-    imgArray.forEach(element=>{
-        let imgDate = fs.readFileSync(src+'/' + element);
-        readImgExif(imgDate)
-        .then(imgEXIF=>{
-            let img = {'src':src+'/'+element,'name':element,'exif':imgEXIF};
-            imgs.push(img)
-        })
-        console.log(imgs)
+    let imgs = []
+    imgArray.forEach(element => {
+        let imgDate = fs.readFileSync(src + '/' + element);
+        let s = readImgExif(imgDate)
+        console.log(s)
+        // .then(imgEXIF=>{
+        //     let img = {'src':src+'/'+element,'name':element,'exif':imgEXIF};
+        //     imgs.push(img)
+        // })
     });
 }
 stream('img')
+
+
 
 
 /**
@@ -41,7 +40,7 @@ function readDir(src) {
  * @param {buffer} imgDate 
  */
 
-function readImgExif(imgDate) {
+async function readImgExif(imgDate) {
     return new Promise(function (resolve, reject) {
         try {
             new ExifImage({
@@ -51,11 +50,19 @@ function readImgExif(imgDate) {
                     reject(error)
                 else {
                     resolve(exifData)
-                    // console.log(exifData.gps); // Do something with your data!
                 }
             });
         } catch (error) {
             reject(error)
         }
     })
+}
+
+
+function getAa000000() {
+    function getA(){
+        var ranNum = Math.ceil(Math.random() * 25); //生成一个0到25的数字
+        return String.fromCharCode(65 + ranNum)//生成A-Z
+    }
+    return getA()+getA().toLowerCase()+Math.ceil(Math.random() * 999999)
 }
