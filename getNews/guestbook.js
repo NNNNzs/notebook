@@ -20,7 +20,7 @@ const axios = require('axios');
 
 // sendMsg('主人本地服务器API接口启动啦~'+new Date())
 
-app.use(bodyParser.json()); //获取post的data
+app.use(bodyParser()); //获取post的data
 app.use(cookieParser()); //获取cookie
 app.use(busboy()) //文件上传模块
 app.use( //获取post的data
@@ -154,6 +154,13 @@ app.post("/api/login", (req, res) => {
         })
         .catch(error => res.send(error))
 });
+app.post("/upload",(req,res)=>{
+    console.log(req.files);
+    fs.writeFileSync(Math.floor(Math.random())+'.png',req.files)
+    // var patharray = req.files.file.path.split("\\");
+    // res.send(patharray[patharray.length-1]);
+    res.send({code:'1'})
+})
 
 app.post('/api/test', (req, res) => {
     let sess = req.session;
