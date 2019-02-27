@@ -2,17 +2,16 @@ const http = require("http");
 const express = require("express");
 const fs = require("fs");
 const bodyParser = require("body-parser"); //post请求获取传参
-const cookieParser = require("cookie-parser"); //获取cookie
 const session = require('express-session'); //会话
 const app = express();
-
-
+const ejs = require('ejs')
 const CONFIG = {
     port: 80
 }
+// app.set("view engine","ejs")
+// app.set('views',__dirname + '/views');
 
 app.use(bodyParser.json()); //获取post的data
-// app.use(cookieParser()); //获取cookie
 app.use( //获取post的data
     bodyParser.urlencoded({
         extended: true
@@ -27,20 +26,24 @@ app.use(session({
     },
 }));
 
-app.all('*', function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", req.headers.origin); //把来路域名设为可以跨域
-    res.header("Access-Control-Allow-Methods", "PUT, GET, POST, DELETE, OPTIONS");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    res.header("Access-Control-Allow-Headers", "Content-Type");
-    res.header("Access-Control-Allow-Credentials", "true");
-    next()
-})
+// app.all('*', function (req, res, next) {
+//     res.header("Access-Control-Allow-Origin", req.headers.origin); //把来路域名设为可以跨域
+//     res.header("Access-Control-Allow-Methods", "PUT, GET, POST, DELETE, OPTIONS");
+//     res.header("Access-Control-Allow-Headers", "X-Requested-With");
+//     res.header("Access-Control-Allow-Headers", "Content-Type");
+//     res.header("Access-Control-Allow-Credentials", "true");
+//     next()
+// })
+
 app.all('/', (req, res) => {
-    if (!req.session.name) {
-        res.redirect('/login')
-    } else {
-        res.send('登陆成功')
-    }
+    
+  ejs.render('index',{helloWorld: 'hello,world'});
+    // if (!req.session.name) {
+    //     res.redirect('/login')
+    // } else {
+    //     // res.send('登陆成功')
+    //     // res.redirect('/login')
+    // }
 
 })
 app.all('/register', function (req, res, next) {
@@ -58,6 +61,7 @@ app.all('/register', function (req, res, next) {
 app.all('/login', function (req, res, next) {
     let data = req.query
     if(!data.username&&!data.password){
+        res.render('login')
         res.send('请输入账号密码')
     }
     let users = mysql.select('users')
