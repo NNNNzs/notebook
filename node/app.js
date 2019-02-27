@@ -44,10 +44,10 @@ app.all('/', (req, res) => {
 
 })
 app.all('/register', function (req, res, next) {
-    if (req.query.account && req.query.password) {
+    if (req.query.username && req.query.password) {
         let oldDB = mysql.readDB();
-        let { account, password } = req.query
-        oldDB.users.push({ account, password })
+        let { username, password } = req.query
+        oldDB.users.push({ username, password })
         mysql.updataDB(oldDB)
         res.send('注册成功')
     }
