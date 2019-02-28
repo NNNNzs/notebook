@@ -1,0 +1,19 @@
+﻿/*设置主区域最小高度,防止无内容高度坍塌*/
+main {
+  min-height: 450px;
+}
+/*将页头logo调整到左侧*/
+.am-header .am-header-title {
+  margin: 0;
+}
+.am-header .am-header-title a {
+  float: left;
+}
+.am-header .am-header-title img {
+  height: 40px;
+  margin-top: 5.5px;
+  vertical-align: top;
+}
+.login{
+  background: #000000;
+}

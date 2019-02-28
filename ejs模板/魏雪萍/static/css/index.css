@@ -1,0 +1,71 @@
+﻿/*首页九宫格*/
+main .boxes {
+  width: 100%;
+  margin-top: .5em;
+  /*修正链接颜色为白色*/
+  /*制定九宫格背景颜色*/
+}
+main .boxes a:focus,
+main .boxes a:hover {
+  color: #fff;
+}
+main .boxes a {
+  color: #ffe;
+}
+main .boxes .box {
+  font-weight: bold;
+  /*通过table和table-cell实现垂直居中，IE兼容性不好但是手机端稳定*/
+  display: table;
+  height: 100px;
+  height: 30vw;
+  transition: all .2s ease;
+  text-align: center;
+  color: #eee;
+  border: .3em solid #fff;
+}
+main .boxes .box .box_content {
+  display: table-cell;
+  padding: 1em 0;
+  vertical-align: middle;
+}
+@media screen and (min-width: 768px) {
+  main .boxes .box .box_content span:nth-child(3) {
+    font-size: 200%;
+  }
+  main .boxes .box .box_content .am-icon-lg {
+    font-size: 300%;
+  }
+}
+main .boxes .box-1 {
+  background-color: #8678ab;
+}
+main .boxes .box-2 {
+  background-color: #9cd8f0;
+}
+main .boxes .box-3 {
+  background-color: #9caef0;
+}
+main .boxes .box-4 {
+  background-color: #fbc599;
+}
+main .boxes .box-5 {
+  background-color: #a7c18b;
+}
+main .boxes .box-6 {
+  background-color: #b49cf0;
+}
+
+
+
+
+
+
+main .boxes .box-7 {
+  background-color: #72cb6f;
+}
+main .boxes .box-8 {
+  background-color: #008000;
+}
+main .boxes .box-9 {
+  background-color: #f76f60;
+}
