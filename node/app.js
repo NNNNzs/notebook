@@ -2,14 +2,14 @@ const http = require("http");//网络请求
 const express = require("express");//作为web服务器
 const fs = require("fs");//操作本地文件
 const bodyParser = require("body-parser"); //post请求获取传参
-const cookieParser = require("cookie-parser"); //获取cookie
 const session = require('express-session'); //会话
-const app = express();//使用web服务器
-
-
+const app = express();
+const ejs = require('ejs')
 const CONFIG = {
     port: 80
 }
+// app.set("view engine","ejs")
+// app.set('views',__dirname + '/views');
 
 app.use(bodyParser.json()); //获取post的data
 app.use( //获取post的data
@@ -37,11 +37,14 @@ app.all('*', function (req, res, next) {
     next()
 })
 app.all('/', (req, res) => {
-    if (!req.session.name) {
-        res.redirect('/login')
-    } else {
-        res.send('登陆成功')
-    }
+    
+  ejs.render('index',{helloWorld: 'hello,world'});
+    // if (!req.session.name) {
+    //     res.redirect('/login')
+    // } else {
+    //     // res.send('登陆成功')
+    //     // res.redirect('/login')
+    // }
 
 })
 app.all('/register', function (req, res, next) {
@@ -60,6 +63,7 @@ app.all('/register', function (req, res, next) {
 app.all('/login', function (req, res, next) {
     let data = req.query
     if(!data.username&&!data.password){
+        res.render('login')
         res.send('请输入账号密码')
     }
     let users = mysql.select('users')
