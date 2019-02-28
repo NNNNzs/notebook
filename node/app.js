@@ -1,10 +1,10 @@
-const http = require("http");
-const express = require("express");
-const fs = require("fs");
+const http = require("http");//网络请求
+const express = require("express");//作为web服务器
+const fs = require("fs");//操作本地文件
 const bodyParser = require("body-parser"); //post请求获取传参
 const cookieParser = require("cookie-parser"); //获取cookie
 const session = require('express-session'); //会话
-const app = express();
+const app = express();//使用web服务器
 
 
 const CONFIG = {
@@ -12,12 +12,12 @@ const CONFIG = {
 }
 
 app.use(bodyParser.json()); //获取post的data
-// app.use(cookieParser()); //获取cookie
 app.use( //获取post的data
     bodyParser.urlencoded({
         extended: true
     })
 );
+//express操作session的第三方库
 app.use(session({
     secret: 'secret', // 对session id 相关的cookie 进行签名
     resave: true,
@@ -27,6 +27,7 @@ app.use(session({
     },
 }));
 
+//全局拦截器，允许跨域
 app.all('*', function (req, res, next) {
     res.header("Access-Control-Allow-Origin", req.headers.origin); //把来路域名设为可以跨域
     res.header("Access-Control-Allow-Methods", "PUT, GET, POST, DELETE, OPTIONS");
@@ -55,6 +56,7 @@ app.all('/register', function (req, res, next) {
         res.send('请输入账号密码')
     }
 })
+
 app.all('/login', function (req, res, next) {
     let data = req.query
     if(!data.username&&!data.password){
