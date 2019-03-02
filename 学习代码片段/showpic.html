@@ -33,7 +33,8 @@
                     console.log(e)
                     // portrait.src = e.target.result;
                     // console.log(e.target.result)
-                    $('#imglist').append('<img src="'+ e.target.result+'">');
+                    // $('#imglist').append('<img src="'+ e.target.result+'">');
+                    $('body').append('<img src="'+ e.target.result+'">')
                 };
                 fr.readAsDataURL(file);
                 // portrait.style.display = 'block';
