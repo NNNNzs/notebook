@@ -3,6 +3,9 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const session = require('express-session');
+
+
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -20,6 +23,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+  secret: 'secret', // 对session id 相关的cookie 进行签名
+  resave: true,
+  name:'af_session',
+  saveUninitialized: false, // 是否保存未初始化的会话
+  cookie: {
+      maxAge: 1000 * 60 * 3, // 设置 session 的有效时间，单位毫秒
+  },
+}));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
