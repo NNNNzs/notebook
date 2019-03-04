@@ -1,10 +1,25 @@
 const axios = require('axios');
-var data = `{color: "red", acceptUsers: ["倪宗山"], mapContent: [{ "value": "111", "key": "测试" }],"title": "安装量预警" ,"time":15}`
-// data = JSON.stringify(data)
-console.log(data)
-axios({
-    url: 'http://fina.test.bz.cn/SendMessage?jsonData='+data,
-    method: "get",
-}).then(rep => {
-    console.log(rep.data)
-}).catch(res => { console.log(res) });
+const cheerio = require('cheerio')
+const http = require('http')
+
+function getGuideByUrl(data) {
+    data = 'http://search.onlinedown.net/search_list.php?searchsid=1&searchname=' + data
+    http.get(data, function (res) {
+        let html = '';
+        res.on('data', function (data) {
+            html += data;
+        });
+        res.on('end', function () {
+            let $ = cheerio.load(html, {
+                ignoreWhitespace: true,
+                decodeEntities: false,
+            })
+            // console.log(html)
+            // guide = $('p').first().text() || $('p').last().text() || '暂无介绍';
+            let title = $('.listCont').length
+            console.log(title)
+        })
+    });
+}
+
+getGuideByUrl('tengxushiping')

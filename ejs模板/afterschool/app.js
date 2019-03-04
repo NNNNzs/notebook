@@ -11,6 +11,7 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const loginRouter = require('./routes/login')
 const apiRouter = require('./routes/api')
+const productRouter = require('./routes/product')
 
 const app = express();
 
@@ -34,6 +35,7 @@ app.use(session({
 }));
 
 app.use('/', indexRouter);
+app.use('/product',productRouter)
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 app.use('/api', apiRouter);
