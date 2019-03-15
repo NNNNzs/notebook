@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/css/style.css' />
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <h1><%= title %></h1>
+  <p>Welcome to <%= title %></p>
+  <form action="/api/rel" method='post' enctype="multipart/form-data" accept-charset="utf-8">
+    <input type="file" id="data" name="inputFile" />
+    <input type="submit" value="上传" id="sub" />
+    <button id="send">点击</button>
+  </form>
+
+
+
+  <script>
+
+    function send() {
+      var formData = new FormData();
+      formData.append("name",$('#data')[0].files[0]);
+      $.ajax({
+        url: '/api/rel',
+        method: 'post',
+        data:{inputFile:formData}
+      }).then(res => {
+        console.log(res)
+      }).catch(err => {
+        console.log(err)
+      })
+    }
+    $('#send').on('click', send)
+  </script>
+</body>
+
+</html>
