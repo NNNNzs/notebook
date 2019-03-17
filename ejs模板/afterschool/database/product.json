@@ -1,0 +1,24 @@
+{
+    "works": [
+        {
+            "imgSrc": "Assets/upload/img1.jpg",
+            "author": "新读小学李三",
+            "describe":"冬天的太阳"
+        },
+        {
+            "imgSrc": "Assets/upload/img2.jpg",
+            "author": "实验小学张四",
+            "describe":"地球妈妈"
+        },
+        {
+            "imgSrc": "Assets/upload/img3.jpg",
+            "author": "湖东路小学赵五",
+            "describe":"小青蛙的一家"
+        },
+        {
+            "imgSrc": "Assets/upload/img4.jpg",
+            "author": "湖东路小学龙傲天",
+            "describe":"教师节快乐"
+        }
+    ]
+}

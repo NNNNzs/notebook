@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var {login} = require('../control/login');
 
 
 
@@ -12,7 +11,16 @@ router.get('/', function(req, res, next) {
 router.post('/',(req,res,next)=>{
   let {username,password} = req.body
   let msg = login(username,password)
-  res.send(msg)
+  if(msg.code===200){
+    //登录成功
+    res.render('index', { username: username });
+  }else if(msg.code===404){
+    //用户不存在
+    res.render('index', { username: 'Express' });
+  }else{
+    //密码错误
+    res.send(msg)
+  }
 })
 
 module.exports = router;

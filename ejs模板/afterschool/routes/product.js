@@ -1,9 +1,12 @@
-var express = require('express');
-var router = express.Router();
-
+const express = require('express');
+const router = express.Router();
+const {mysql} = require('../tools/index');
+let tables = mysql.readDB('product')
+let works = tables.works
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('product', { title: 'Express' });
+
+router.get('/', function (req, res, next) {
+  res.render('product', { works: works });
 });
 
 module.exports = router;

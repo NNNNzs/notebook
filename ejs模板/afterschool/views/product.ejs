@@ -13,21 +13,19 @@
 <body>
     <div class="top_bg">
         <div class="top">
-            <a href="">
-                <!-- <img src="Assets/images/icon1.jpg" alt=""/> -->
+            <a href="/login">
                 <em>登录</em>
             </a>
             <a href="">
-                <!-- <img src="Assets/images/icon2.jpg" alt=""/> -->
                 <em>注册</em>
             </a>
         </div>
     </div>
     <div class="head clearfix">
-        <div class="logo"><a href="index.html"><img src="Assets/images/logo.png" alt="" /></a></div>
+        <div class="logo"><a href="/"><img src="Assets/images/logo.png" alt="" /></a></div>
         <ul class="nav clearfix">
             <li>
-                <a href="index.html">
+                <a href="/">
                     首页
                     <p>HOME</p>
                 </a>
@@ -66,82 +64,33 @@
         <div class="scd">
             <div class="pst">
                 您现在的位置：
-                <a href="">首页</a>>
-                <a href="">产品案例</a>>
-                <a href="">BLACK STAR</a>
+                <a href="/">首页</a>>
+                <a href="/product">产品案例</a>
             </div>
-            <div class="space_hx">&nbsp;</div>
-            <div class="s_name p_name"><a href="" class="on">上传</a><a href="">评论</a></div>
+            <div class="s_name p_name">
+                <a href="" class="on">上传</a>
+                <a href="">评论</a></div>
             <div class="equipment">
                 <ul class="clearfix">
+                    <% works.forEach(function(item){%>
                     <li>
-                        <a href="pro_d.html">
-                            <img src="Assets/upload/img1.jpg" alt="" />
+                        <a href="">
+                            <img src="<%=item.imgSrc %>" >
                             <div class="ctn">
-                                <div class="name">新读小学李三作品</div>
-                                <div class="des">主题：冬天的太阳</div>
+                                <div class="name"><%=item.author %>作品</div>
+                                <div class="des">主题:<%=item.describe %></div>
                             </div>
                         </a>
                     </li>
-                    <li>
-                        <a href="pro_d.html">
-                            <img src="Assets/upload/img2.jpg" alt="" />
-                            <div class="ctn">
-                                <div class="name">实验小学张四作品</div>
-                                <div class="des">主题：地球妈妈</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="pro_d.html">
-                            <img src="Assets/upload/img3.jpg" alt="" />
-                            <div class="ctn">
-                                <div class="name">湖东路小学赵五作品</div>
-                                <div class="des">主题：小青蛙的一家</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="pro_d.html">
-                            <img src="Assets/upload/img4.jpg" alt="" />
-                            <div class="ctn">
-                                <div class="name">湖东路小学龙傲天作品</div>
-                                <div class="des">主题：教师节快乐</div>
-                            </div>
-                        </a>
-                    </li>
-                    <!-- <li>
-                        <a href="pro_d.html">
-                            <img src="Assets/upload/pic3.jpg" alt="" />
-                            <div class="ctn">
-                                <div class="name">测试仪器</div>
-                                <div class="des">测试仪器测试仪器测试仪器测试仪器测试仪器测试仪器器测试仪器测试仪器</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="pro_d.html">
-                            <img src="Assets/upload/pic3.jpg" alt="" />
-                            <div class="ctn">
-                                <div class="name">测试仪器</div>
-                                <div class="des">测试仪器测试仪器测试仪器测试仪器测试仪器测试仪器器测试仪器测试仪器</div>
-                            </div>
-                        </a>
-                    </li> -->
+                    <% }) %>
                 </ul>
                 <div class="space_hx">&nbsp;</div>
-                <div class="pages">
+                <!-- <div class="pages">
                     <a href="">上一页</a>
                     <a href="">1</a>
                     <a href="">2</a>
-                    <a href="">3</a>
-                    <a href="">4</a>
-                    <a href="">5</a>
-                    <a href="">6</a>
-                    <a href="">…</a>
-                    <a href="">22</a>
                     <a href="">下一页</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
