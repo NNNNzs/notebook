@@ -1,0 +1,18 @@
+.container {
+    width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+body {
+    background: #efefef;
+}
+
+p {
+    text-align: left;
+    text-indent: 2em;
+    font-size: 20px;
+}
+.container img{
+    width: 960px;
+}
