@@ -2,8 +2,6 @@ const fs = require('fs');
 const path = require('path')
 var mysql = {
     readDB(tableName) {
-        // path.resolve(__dirname, '../public'+staticUrl+md5Name)
-        // let database = fs.readFileSync(__dirname+'../database/'+tableName+'.json').toString('utf-8')
         let database = fs.readFileSync(path.resolve(__dirname, '../database/'+tableName+'.json')).toString('utf-8')
         database = JSON.parse(database)
         return database

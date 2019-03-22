@@ -36,12 +36,16 @@
 <body>
     <div class="top_bg">
         <div class="top">
+            <% if(typeof username==='undefined'){ %>
             <a href="/login">
                 <em>登录</em>
             </a>
-            <a href="">
+            <a href="/login">
                 <em>注册</em>
             </a>
+            <% } else{%>
+            <a><%=username %></a>
+            <% }%>
         </div>
     </div>
     <div class="head clearfix">
@@ -66,13 +70,13 @@
                 </a>
             </li>
             <li>
-                <a href="about.html">
+                <a href="/fun">
                     益智趣味
                     <p>FUN</p>
                 </a>
             </li>
             <li>
-                <a href="contact.html">
+                <a href="/book">
                     推荐书籍
                     <p>BOOKS</p>
                 </a>
@@ -156,16 +160,6 @@
     </div>
     <!--主体盒子-->
     <!--底部-->
-    <div class="f_bg">
-        <div class="foot">
-            <div class="f_nav">
-                <a href="">法律申明</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                <a href="">隐私保护</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                <a href="">联系我们</a>
-            </div>
-            ©版权所有INFINOVA 更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a>
-        </div>
-    </div>
     <!--底部-->
 </body>
 

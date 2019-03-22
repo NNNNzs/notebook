@@ -18,27 +18,25 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/rel', upload.fields([{ name: 'inputFile', maxCount: 1 }]), function (req, res, next) {
-    var inputFiles = req.files
+    let inputFiles = req.files
     //读取文件内容
     let file = inputFiles['inputFile'][0]//实际文件
     let extname = path.extname(file.originalname);//后缀名
-    var md5Name = crypto.createHash('md5').update(file.buffer, 'utf-8').digest('hex');//计算出上传文件的md5,当做文件名
+    let md5Name = crypto.createHash('md5').update(file.buffer, 'utf-8').digest('hex');//计算出上传文件的md5,当做文件名
+    //将文件以md5+后缀的方式存进public的uploads文件夹里
     fs.writeFileSync(path.resolve(__dirname, '../public'+staticUrl+md5Name)+extname,file.buffer)
-    res.redirect(staticUrl+md5Name+extname)
-
-    // 下面的代码是在用multer默认上传路径时，重命名文件名，加后缀
-    // fs.rename(file.path, file.path + extname, function (err) {
-    //     if (err) {
-    //         res.send('上传失败')
-    //     } else {
-    //         let imgUrl = staticUrl + file.filename + extname;//相对于服务器路径
-    //         res.redirect(imgUrl)
-    //     }
-    // })
+    res.send(staticUrl+md5Name+extname)
+    // res.redirect(staticUrl+md5Name+extname)
 });
-router.post('/login',)
 
-
+router.get('/islogin',(req,res,next)=>{
+    if(req.session.name){
+        res.send('1')
+    }
+    else{
+        res.send('0')
+    }
+})
 
 
 router.get('/rel', function (req, res, next) {

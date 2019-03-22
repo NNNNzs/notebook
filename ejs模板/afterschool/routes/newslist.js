@@ -6,7 +6,7 @@ let works = tables.works
 /* GET home page. */
 
 router.get('/', function (req, res, next) {
-  res.render('newslist', { works: works });
+  res.render('newslist', { username: req.session.name });
 });
 
 module.exports = router;
