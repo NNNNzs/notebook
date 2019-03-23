@@ -15,7 +15,8 @@ router.post('/', (req, res, next) => {
   let msg = login(username, password)
   if (msg.code === 200) {
     req.session.name = username;
-    res.render('index', { username: req.session.name });
+    // res.render('index', { username: req.session.name });
+    res.redirect('/')
   } else if (msg.code === 404) {
     //用户不存在
     res.render('index', { username:null });
