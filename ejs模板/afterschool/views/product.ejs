@@ -16,6 +16,17 @@
                 , form = layui.form;
         });
     </script>
+    <style>
+        #uploadImg {
+            width: 200px;
+            height: 200px;
+            display: block;
+        }
+
+        #upload {
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -81,12 +92,12 @@
             </div>
             <div class="s_name p_name">
                 <a id="upload" class="on">上传</a>
-                <a href="">评论</a></div>
+            </div>
             <div class="equipment">
                 <ul class="clearfix">
                     <% works.forEach(function(item){%>
                     <li>
-                        <a href="">
+                        <a target="_blank" href="<%=item.imgSrc %>">
                             <img src="<%=item.imgSrc %>">
                             <div class="ctn">
                                 <div class="name"><%=item.author %>作品</div>
@@ -103,16 +114,49 @@
     </div>
 
     <script>
+        var imgSrc = ''//定义一个全局的图片路径，因为上传图片异步返回路径
+        var pages = <%-pages %>;//从服务端获取到关于分页的数据
         layui.use('laypage', function () {
             var laypage = layui.laypage;
-
             //执行一个laypage实例
             laypage.render({
                 elem: 'page', //注意，这里的 test1 是 ID，不用加 # 号
-                count: 30 //数据总数，从服务端得到
+                count: pages.totalCount, //数据总数，从服务端得到
+                limit: 6,//每页显示的条数
+                curr: pages.currPage,
+                layout: ['count', 'prev', 'page', 'next'],
+                jump(obj, first) {
+                    if (!first) {
+                        location.href = "/product?page=" + obj.curr;
+                    }
+                },
             });
         });
-        var form = ``
+        //定义表单的内容
+        var uploadForm = `<form class="layui-form">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">学校</label>
+                                <div class="layui-input-block">
+                                <input type="text" name="school" autocomplete="off" placeholder="请输入学校" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">姓名</label>
+                                <div class="layui-input-block">
+                                <input type="text" name="author" autocomplete="off" placeholder="请输入作者" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">图片描述</label>
+                                <div class="layui-input-block">
+                                <input type="text" name="describe" placeholder="请输入图片描述" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <br/>                            
+                            <div class="layui-upload" id="imgBox">
+                                <input type="file" id="data" name="inputFile" />
+                            </div>   
+                        </form>`
         $('#upload').on('click', function () {
             $.ajax({
                 url: '/api/islogin',
@@ -120,12 +164,18 @@
                 success(res) {
                     if (res === '1') {
                         layer.open({
-                            title: '上传'
+                            title: '上传',
+                            content: uploadForm,
+                            offset: '400px',
+                            btn1: function () {
+                                submitForm()
+                            }
                         })
                     } else {
                         layer.open({
-                            title: '上传失败'
-                            , content: '请先登录'
+                            title: '上传失败',
+                            content: '请先登录',
+                            offset: '400px'
                         });
                     }
 
@@ -135,20 +185,49 @@
             })
 
         })
-        function send() {
-            var formData = new FormData();
-            formData.append("name", $('#data')[0].files[0]);
+        function submitForm() {
+            var school = $('[name="school"]').val() || '暂无';
+            var author = $('[name="author"]').val() || '暂无';
+            var describe = $('[name="describe"]').val() || '暂无';
+            var formData = {
+                imgSrc: imgSrc,
+                author: school + author,
+                describe: describe
+            }
             $.ajax({
-                url: '/api/rel',
-                method: 'post',
-                data: { inputFile: formData }
-            }).then(res => {
-                console.log(res)
-            }).catch(err => {
-                console.log(err)
+                url: '/api/upload',
+                type: 'post',
+                data: formData,
+                success(res) {
+                    if (res.status === 200) {
+                        window.location.reload();
+                    }
+                },
+                error(err) {
+                    console.log(err)
+                }
             })
         }
-        $('#send').on('click', send)
+        function uploadImg() {
+            var formData = new FormData();
+            formData.append("inputFile", $('#data')[0].files[0]);
+            $.ajax({
+                url: '/api/rel',
+                type: 'post',
+                contentType: false,
+                processData: false,
+                mimeType: "multipart/form-data",
+                data: formData,
+                success(res) {
+                    $('#imgBox').append(`<img id="uploadImg" src="${res}">`);
+                    imgSrc = res
+                },
+                error(err) {
+                    console.log(err)
+                }
+            })
+        }
+        $(document).on('change', '#data', uploadImg)
     </script>
 </body>
 

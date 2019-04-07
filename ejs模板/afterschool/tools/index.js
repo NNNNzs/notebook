@@ -1,17 +1,18 @@
 const fs = require('fs');
 const path = require('path')
 var mysql = {
-    readDB(tableName) {
-        let database = fs.readFileSync(path.resolve(__dirname, '../database/'+tableName+'.json')).toString('utf-8')
+    readDB(databaseName) {
+        let database = fs.readFileSync(path.resolve(__dirname, '../database/' + databaseName + '.json')).toString('utf-8')
         database = JSON.parse(database)
         return database
     },
-    updataDB(tableName,data) {
-        data = JSON.stringify(data)
-        fs.writeFileSync(path.resolve(__dirname, '../database/'+tableName+'.json'), data)
+    updateDB(databaseName, data) {
+        data = JSON.stringify(data);
+        console.log(data)
+        fs.writeFileSync(path.resolve(__dirname, '../database/' + databaseName + '.json'), data)
     },
-    select(tableName,colName){
-        let json = this.readDB(tableName)
+    select(databaseName, colName) {
+        let json = this.readDB(databaseName)
         return json[colName]
     }
 }

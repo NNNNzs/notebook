@@ -1,16 +1,1 @@
-{
-    "users": [
-        {
-            "username": "nizongshan",
-            "password": "123456"
-        },
-        {
-            "username": "weixueping",
-            "password": "123456"
-        },
-        {
-            "username": "shaoshuqing",
-            "password": "123456"
-        }
-    ]
-}
+{"users":[{"username":"nizongshan","password":"123456"},{"username":"weixueping","password":"123456"},{"username":"shaoshuqing","password":"123456"},{"username":"nizongshan11","password":"123456"}]}

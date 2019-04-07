@@ -24,24 +24,31 @@ router.post('/rel', upload.fields([{ name: 'inputFile', maxCount: 1 }]), functio
     let extname = path.extname(file.originalname);//后缀名
     let md5Name = crypto.createHash('md5').update(file.buffer, 'utf-8').digest('hex');//计算出上传文件的md5,当做文件名
     //将文件以md5+后缀的方式存进public的uploads文件夹里
-    fs.writeFileSync(path.resolve(__dirname, '../public'+staticUrl+md5Name)+extname,file.buffer)
-    res.send(staticUrl+md5Name+extname)
+    fs.writeFileSync(path.resolve(__dirname, '../public' + staticUrl + md5Name) + extname, file.buffer)
+    res.send(staticUrl + md5Name + extname)
     // res.redirect(staticUrl+md5Name+extname)
 });
 
-router.get('/islogin',(req,res,next)=>{
-    if(req.session.name){
+router.get('/islogin', (req, res, next) => {
+    if (req.session.name) {
         res.send('1')
     }
-    else{
+    else {
         res.send('0')
     }
-})
-
-
-router.get('/rel', function (req, res, next) {
-    res.render('index', { title: db });
 });
+
+//接收图片上传
+router.post('/upload', (req, res, next) => {
+    //接收到三个参数
+    let { imgSrc, author, describe } = req.body;    
+    //把参数存到数据库
+    let productList = mysql.readDB('product');
+    productList.works.push({ imgSrc, author, describe })
+    mysql.updateDB('product',productList)
+    res.send({status:200})    
+});
+
 
 
 module.exports = router;

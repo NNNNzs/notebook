@@ -8,5 +8,8 @@ let works = tables.works
 router.get('/', function (req, res, next) {
   res.render('book', { username: req.session.name});
 });
+router.get('/detail', function (req, res, next) {
+  res.render('bookdetail', { username: req.session.name});
+});
 
 module.exports = router;
