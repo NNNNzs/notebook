@@ -161,6 +161,9 @@
             $.ajax({
                 url: '/api/islogin',
                 type: 'get',
+                xhrFields: {
+                    withCredentials: true // 这里设置了withCredentials
+                },
                 success(res) {
                     if (res === '1') {
                         layer.open({

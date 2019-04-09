@@ -41,10 +41,12 @@ router.get('/islogin', (req, res, next) => {
 //接收图片上传
 router.post('/upload', (req, res, next) => {
     //接收到三个参数
-    let { imgSrc, author, describe } = req.body;    
+    let { imgSrc, author, describe } = req.body;
+    let name = req.session.name
     //把参数存到数据库
     let productList = mysql.readDB('product');
-    productList.works.push({ imgSrc, author, describe })
+    console.log(name);
+    productList.works.push({ imgSrc, author, describe,name })
     mysql.updateDB('product',productList)
     res.send({status:200})    
 });
