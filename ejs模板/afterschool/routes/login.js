@@ -41,5 +41,13 @@ router.post('/register', (req, res, next) => {
   console.log(msg);
   res.send(msg)
 })
+router.post('/logout',(req,res,next)=>{
+  req.session.name = undefined;
+  if(!req.session.name){
+    res.send({status:200,msg:'ok'})
+  }else{
+    res.send({status:400,msg:'fail'})
+  }
+})
 
 module.exports = router;

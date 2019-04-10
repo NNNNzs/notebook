@@ -41,6 +41,7 @@
             </a>
             <% } else{%>
             <a><%=username %></a>
+                <a class="logout"> 退出登录</a>
             <% }%>
         </div>
     </div>
@@ -189,7 +190,16 @@
 
         })
         function submitForm() {
-            var school = $('[name="school"]').val() || '暂无';
+            if (!imgSrc) {
+                layer.open({
+                    offset: '400px',
+                    title: '温馨提示'
+                    , content: '图片必上传'
+                });
+
+                return false
+            }
+            var school = $('[name="school"]').val();
             var author = $('[name="author"]').val() || '暂无';
             var describe = $('[name="describe"]').val() || '暂无';
             var formData = {

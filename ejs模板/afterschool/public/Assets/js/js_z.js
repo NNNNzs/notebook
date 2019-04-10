@@ -60,5 +60,18 @@ function marqueeStart(i, direction){
 	}
 };
 
+$(document).on('click','.logout',function(){
+	$.ajax({
+		url: '/login/logout',
+		type: 'post',
+		success(res){
+			if(res.status===200){
+				window.location.reload()
+			}
+		},
+		error(err){
+		}
+	})
+})
 
 
