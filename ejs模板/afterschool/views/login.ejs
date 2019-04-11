@@ -182,7 +182,7 @@
                 }
             })
         }
-        function register(username, password) {
+        function register(username, password) {            
             $.ajax({
                 url: '/login/register',
                 type: 'post',
@@ -208,6 +208,20 @@
                 }
             })
         }
+        $(document).on('keyup','#loginForm [name="password"]',function(event){
+            if (event.keyCode == "13") {
+                let username = $('#loginForm [name="username"]').val();
+                let password = $('#loginForm [name="password"]').val();
+                login(username,password)
+            }
+        });
+        $(document).on('keyup','#registerForm [name="password"]',function(event){
+            if (event.keyCode == "13") {
+                let username = $('#registerForm [name="username"]').val();
+                let password = $('#registerForm [name="password"]').val();
+                register(username,password)
+            }
+        })
     </script>
 </body>
 
