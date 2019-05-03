@@ -8,4 +8,5 @@ module.exports = app => {
   router.get('/', controller.home.index);
   router.get('/news', controller.news.list);
   router.get('/getNews', controller.getNews.index);
+  router.get('/getWeibo', controller.getWeibo.index);
 };
