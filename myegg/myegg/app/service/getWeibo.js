@@ -37,13 +37,16 @@ class getWeibo extends Service {
     }
     async insertToDB(data) {
         const result = await this.app.mysql.insert('w_top', data);
+        return result;
     }
     async outputWeibo() {
         let query = this.ctx.query;
-        if(query.title){
+        //根据标题查
+        if (query.title) {
             let selectByTitle = `SELECT * FROM w_top WHERE title = '${query.title}' ORDER BY time; `;
             return await this.app.mysql.query(selectByTitle);
         }
+        //获取热搜
         let sqlQuery = 'SELECT * FROM w_top WHERE time = (SELECT time FROM w_top ORDER BY id DESC LIMIT 1) ORDER BY rank;';
         let results = await this.app.mysql.query(sqlQuery);
         return results;

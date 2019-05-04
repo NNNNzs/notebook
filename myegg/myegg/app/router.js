@@ -9,4 +9,5 @@ module.exports = app => {
   router.get('/news', controller.news.list);
   router.get('/getNews', controller.getNews.index);
   router.get('/getWeibo', controller.getWeibo.index);
+  router.get('/chat',controller.ai.chat);
 };

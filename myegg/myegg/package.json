@@ -7,13 +7,15 @@
     "declarations": true
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.3",
     "egg": "^2.15.1",
     "egg-alinode": "^2.0.1",
     "egg-mysql": "^3.0.0",
     "egg-scripts": "^2.11.0",
     "egg-view-nunjucks": "^2.2.0",
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "querystring": "^0.2.0"
   },
   "devDependencies": {
     "autod": "^3.0.1",

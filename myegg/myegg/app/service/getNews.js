@@ -9,7 +9,7 @@ class getNews extends Service {
         const json = await this.ctx.curl(pageUrl, { dataType: 'json' });
         //超过次数
         if (json.error_code === 10012) {
-            // 
+            // 超过访问次数
             return [];
         }
         let result = json.data.result;
@@ -19,8 +19,25 @@ class getNews extends Service {
             return []
         }
     }
-    async getInfoByUrl(data) {
-        let {uniquekey, title, date, category, author_name, url, thumbnail_pic_s, thumbnail_pic_s02, thumbnail_pic_s03 } = data;
+    async getInfo() {
+        let dataArr = [];
+        dataArr = await this.getNewsByApi();
+
+        //抓取内容和简介，拼接到原数组
+
+        // 等待异步操作完成，返回执行结果
+        let results = await Promise.all(dataArr.map(async (item) => {
+            let date = new Date()
+            //返回拼接的对象
+            let data = Object.assign(item, await this.getInfoByUrl(item.url), { ins_time: date });
+            this.setDataIntoMysql(data);
+            return data
+        }));
+
+        return results;
+
+    }
+    async getInfoByUrl(url) {
         let res = await this.ctx.curl(url, { dataType: 'text' });
         let html = res.data;
         let $ = cheerio.load(html, {
@@ -29,7 +46,7 @@ class getNews extends Service {
         });
         let guide = $('p').first().text() || $('p').last().text() || '暂无介绍';
         let content = $('#content').html();
-        return html;
+        return { guide, content };
     }
     async getRealHtml(url) {
         let res = await this.ctx.curl(url, { dataType: 'text' });
@@ -37,10 +54,11 @@ class getNews extends Service {
         return html;
     }
     async setDataIntoMysql(data) {
-
+        const result = await this.app.mysql.insert('newslist', data);
+        return result;
     }
     async init() {
-        return await this.getInfoByUrl();
+        return await this.getInfo();
     }
 }
 
