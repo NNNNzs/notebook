@@ -17,5 +17,13 @@ module.exports = {
         app: true,
         // 是否加载到 agent 上，默认关闭
         agent: false,
-    }
+    },
+    redis: {
+        client: {
+            port: 6379, // Redis port
+            host: 'api.nnnnzs.cn', // Redis host
+            password: '',
+            db: 0,
+        }
+    },
 };

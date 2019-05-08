@@ -111,6 +111,23 @@ class Message extends DingDing {
         });
         return res.data;
     }
+    //获取打卡详情
+    async getlistRecord(){
+        let apiUrl = '/attendance/listRecord?access_token=ACCESS_TOKEN';
+        let res = await axios({
+            url: `${this.baseUrl}${apiUrl}`,
+            params: {
+                access_token: this.accessToken
+            },
+            method: 'post',
+            data: {
+                agent_id: this.agentId,
+                userid_list: 'manager1688',
+                msg: {
+                }
+            },
+        });
+    }
 }
 let font = new DingDingDept()
 // font.getDeptIdByParent().then(res => {
