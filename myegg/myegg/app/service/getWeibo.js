@@ -4,7 +4,9 @@ const cheerio = require('cheerio');
 class getWeibo extends Service {
     async getHot() {
         const url = 'https://s.weibo.com/top/summary';
-        let res = await this.ctx.curl(url, { dataType: 'text' });
+        let res = await this.ctx.curl(url, {
+            dataType: 'text'
+        });
         let html = res.data;
         let $ = cheerio.load(html, {
             ignoreWhitespace: true,
@@ -29,15 +31,23 @@ class getWeibo extends Service {
 
             })
         }
-        // this.insertToDB(resulte[0]);
         resulte.forEach(e => {
             this.insertToDB(e);
         });
         return resulte;
     }
-    async insertToDB(data) {
+    async insertToDB() {
+        let data = await this.getHot();
         const result = await this.app.mysql.insert('w_top', data);
         return result;
+    }
+    async updateRedis() {
+        let {
+            app
+        } = this
+        let sqlQuery = 'SELECT * FROM w_top WHERE time = (SELECT time FROM w_top ORDER BY id DESC LIMIT 1) ORDER BY rank;';
+        let results = await this.app.mysql.query(sqlQuery);
+        await app.redis.set('weibo', JSON.stringify(results));
     }
     async outputWeibo() {
         let query = this.ctx.query;
@@ -46,9 +56,8 @@ class getWeibo extends Service {
             let selectByTitle = `SELECT * FROM w_top WHERE title = '${query.title}' ORDER BY time; `;
             return await this.app.mysql.query(selectByTitle);
         }
-        //获取热搜
-        let sqlQuery = 'SELECT * FROM w_top WHERE time = (SELECT time FROM w_top ORDER BY id DESC LIMIT 1) ORDER BY rank;';
-        let results = await this.app.mysql.query(sqlQuery);
+        //  走没有title，默认走redis
+        let results = JSON.parse(await app.redis.get('weibo'));
         return results;
     }
     async init() {
