@@ -13,6 +13,7 @@ module.exports = {
   alinode: {
     enable: true,
     package: 'egg-alinode',
+    env:['prod']
   },
   mysql: {
     enable: true,

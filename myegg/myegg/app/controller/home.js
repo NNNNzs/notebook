@@ -9,7 +9,8 @@ class HomeController extends Controller {
     // await app.redis.set('weibo', JSON.stringify(weiboContent));
     // await app.redis.rpush('1234',1);
     // await this.service.getWeibo.updateRedis()
-    let weibo = JSON.parse(await app.redis.get('weibo'));
+    // let weibo = JSON.parse(await app.redis.get('weibo'));
+    let weibo = await this.service.sendMsg.dingding();
     ctx.body = weibo;
     // ctx.body = weiboContent;
   }

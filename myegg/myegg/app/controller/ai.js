@@ -31,12 +31,18 @@ class TencentAI extends Controller {
         data.time_stamp = parseInt(new Date().getTime() / 1000);
         data.nonce_str = data.time_stamp;
         data.sign = this.getReqSign(data, APPKEY);
-        let res = await axios({
-            url: 'https://api.ai.qq.com/fcgi-bin/nlp/nlp_textchat',
-            method: 'post',
-            data: qs.stringify(data)
-        })
-        return res.data;
+        let res = await this.ctx.curl('https://api.ai.qq.com/fcgi-bin/nlp/nlp_textchat',{
+            method:'post',
+            data,
+            dataType:'json'
+        }
+        )
+        // let res = await axios({
+        //     url: '',
+        //     method: 'post',
+        //     data: qs.stringify(data)
+        // })
+        return res;
     }
     async chat() {
         let session =  this.ctx.query.s||'NNNNzs';

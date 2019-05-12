@@ -32,9 +32,11 @@ module.exports = {
         // agentidMode:'IP' '可选，如果设置，则在实例ID中添加部分IP信息，用于多个实例 hostname 相同的场景（以容器为主）'
     },
     redis: {
-        port: 6379, // Redis port
-        host: 'localhost', // Redis host
-        password: '',
-        db: 0,
+        client: {
+            port: 6379, // Redis port
+            host: 'localhost', // Redis host
+            password: '',
+            db: 0,
+        }
     },
 };

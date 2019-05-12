@@ -56,9 +56,21 @@ class getNews extends Service {
     async setDataIntoMysql(data) {
         const result = await this.app.mysql.insert('newslist', data);
         return result;
+    } 
+    async outputNews(){
+        let {
+            keywords = '', type = '头条', page = '1'
+        } =  this.ctx.query;
+        let sqlQuery ='';
+        if (keywords) {
+            sqlQuery = `SELECT * FROM newslist where title like '%${keywords}%' or guide like '%${keywords}%' ORDER BY date DESC limit ${(page - 1) * 30},30`;
+        } else {
+            sqlQuery = `SELECT ID,title,guide,date,category,author_name,url,thumbnail_pic_s,thumbnail_pic_s02,thumbnail_pic_s03,ins_time FROM newslist WHERE category='${type}' ORDER BY date DESC limit ${(page - 1) * 30},30`;
+        }
+        return await this.app.mysql.query(sqlQuery);
     }
     async init() {
-        return await this.getInfo();
+        return await this.outputNews();
     }
 }
 

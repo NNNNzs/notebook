@@ -1,11 +1,13 @@
 const Service = require('egg').Service;
 const cheerio = require('cheerio');
+const axios = require('axios');
 
 class getWeibo extends Service {
     async getHot() {
         const url = 'https://s.weibo.com/top/summary';
         let res = await this.ctx.curl(url, {
-            dataType: 'text'
+            dataType: 'text',
+            timeout:'10000'
         });
         let html = res.data;
         let $ = cheerio.load(html, {
@@ -55,13 +57,15 @@ class getWeibo extends Service {
         if (query.title) {
             let selectByTitle = `SELECT * FROM w_top WHERE title = '${query.title}' ORDER BY time; `;
             return await this.app.mysql.query(selectByTitle);
+        }else{
+            //  走没有title，默认走redis
+            // let results = JSON.parse(await app.redis.get('weibo'));
+            let results  = this.app.redis.get('weibo');
+            return results;
         }
-        //  走没有title，默认走redis
-        let results = JSON.parse(await app.redis.get('weibo'));
-        return results;
     }
     async init() {
-        return await this.outputWeibo();
+        return await this.getHot();
     }
 }
 

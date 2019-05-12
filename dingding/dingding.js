@@ -78,34 +78,6 @@ class Message extends DingDing {
                 userid_list: 'manager1688',
                 msg: {
                     "msgtype": "text", "text": { "content": "晨会纪要"+new Date() },
-                    // "msgtype": "oa",
-                    // "oa": {
-                    //     "message_url": "https://api.nnnnzs.cn/api/getweibo",
-                    //     "head": {
-                    //         "bgcolor": "FFBBBBaaaBB",
-                    //         "text": "头部标题"
-                    //     },
-                    //     "body": {
-                    //         "title": "正文标题",
-                    //         "form": [{
-                    //                 "key": "姓名:",
-                    //                 "value": "张三"
-                    //             },
-                    //             {
-                    //                 "key": "年龄:",
-                    //                 "value": "20"
-                    //             }
-                    //         ],
-                    //         "rich": {
-                    //             "num": "15.6",
-                    //             "unit": "元"
-                    //         },
-                    //         "content": "aa a ",
-                    //         "image": "@lADOADmaWMzazQKA",
-                    //         "file_count": "3",
-                    //         "author": "倪宗山"
-                    //     }
-                    // }
                 }
             },
         });

@@ -32,6 +32,14 @@ module.exports = appInfo => {
     pageSize: 5,
     serverUrl: 'https://hacker-news.firebaseio.com/v0',
   };
+  config.redis={
+    client: {
+      port: 6379, // Redis port
+      host: 'nnnnzs.cn', // Redis host
+      password: '',
+      db: 0,
+  }
+  }
   
 
   return {
