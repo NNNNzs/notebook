@@ -3,11 +3,11 @@ const Service = require('egg').Service;
 const moment = require('moment');
 
 class Message extends Service {
-    async weChat(title,msg) {
-        const data = await this.ctx.curl(`https://sc.ftqq.com/SCU36847T91a389aca957b1bf554b2e728328d1185c029f702c10b.send?text=${title}&desp=${msg}${new Date()}`, { dataType: 'json' });
+    async weChat(title,content,author) {
+        const data = await this.ctx.curl(`https://sc.ftqq.com/SCU36847T91a389aca957b1bf554b2e728328d1185c029f702c10b.send?text=${title}&desp=${content}${new Date()}`, { dataType: 'json' });
         return data;
     }
-    async dingding() {
+    async dingding({title,content,author}) {
         const { ctx } = this;
         const baseUrl = 'https://oapi.dingtalk.com'
         async function getAccessToken() {
@@ -17,7 +17,8 @@ class Message extends Service {
             let res = await ctx.curl(url, { dataType: 'json' });
             return res.data.access_token;
         }
-        async function sendText(userid_list = "manager1688") {
+        async function sendText({title,content,author}) {
+            let userid_list = "manager1688";
             let agent_id = 252661904;//通用消息通知的agent_id
             let token = await getAccessToken()
             let url = `${baseUrl}/topapi/message/corpconversation/asyncsend_v2?access_token=${token}`
@@ -31,25 +32,25 @@ class Message extends Service {
                     msg: {
                         msgtype: "oa",
                         oa: {
-                            message_url: "https://api.nnnnzs.cn/api/getweibo",
+                            message_url: url,
                             head: {
                                 "bgcolor": "718c00",
                                 "text": "计划任务"
                             },
                             body: {
-                                title: "lorloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremem",
+                                title: title,
                                 form: [
                                     {
                                         "key": "内容：",
-                                        "value": "lorloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremem"
+                                        "value": content
                                     },
                                     {
                                         "key": "时间：",
                                         "value": moment().format('YYYY-MM-DD HH:mm:ss')
                                     }
                                 ],
-                                "content": "lorloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremem",
-                                author: "计划任务"
+                                "content": content,
+                                author: author
                             }
                         },
                     }
@@ -57,7 +58,7 @@ class Message extends Service {
             });
             return res;
         }
-        return await sendText();
+        return await sendText({title,content,author});
     }
 }
 

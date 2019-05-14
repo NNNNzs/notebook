@@ -16,9 +16,9 @@ class getWeibo extends Subscription {
     // subscribe 是真正定时任务执行时被运行的函数
     async subscribe() {
         //搞点事情
-        const result2 = await this.ctx.service.getWeibo.insertToDB();
+        // const result2 = await this.ctx.service.getWeibo.insertToDB();
         const result1 = await this.ctx.service.getWeibo.updateRedis();
-        // console.log(result)
+        console.log(result)
     }
 }
 

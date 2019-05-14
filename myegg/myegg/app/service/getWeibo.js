@@ -48,8 +48,10 @@ class getWeibo extends Service {
             app
         } = this
         let sqlQuery = 'SELECT * FROM w_top WHERE time = (SELECT time FROM w_top ORDER BY id DESC LIMIT 1) ORDER BY rank;';
-        let results = await this.app.mysql.query(sqlQuery);
-        await app.redis.set('weibo', JSON.stringify(results));
+        let oldV  = JSON.parse(await this.app.redis.get('weibo'))
+        let newV = await this.app.mysql.query(sqlQuery);
+        this.warning(oldV,newV)
+        return await app.redis.set('weibo', JSON.stringify(newV));
     }
     async outputWeibo() {
         let query = this.ctx.query;
@@ -60,9 +62,29 @@ class getWeibo extends Service {
         }else{
             //  走没有title，默认走redis
             // let results = JSON.parse(await app.redis.get('weibo'));
-            let results  = this.app.redis.get('weibo');
-            return results;
+            let results  = await this.app.redis.get('weibo');
+            return JSON.parse(results);
         }
+    }
+    async warning(oldV,newV){
+        //第一种热度达到某一个数字
+        //第二种，涨幅超过100%
+        //没有预警过
+        //通知，并且加入通知完成的名单
+        // let content =JSON.stringify(Object.assign(oldV,newV));
+        let content = oldV.filter(e=>{
+            if(e.num>3000000){
+                return e.title + ' 热度达到' +e.num;
+            }
+        })
+        content = JSON.stringify(content);
+        console.log(content);
+        let data = {
+            title:'微博热搜预警',
+            content,
+            author:'微博预警系统'
+        }
+        let a = await this.ctx.service.sendMsg.dingding(data);
     }
     async init() {
         return await this.getHot();
