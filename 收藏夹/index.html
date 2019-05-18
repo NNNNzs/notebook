@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+        function addBookmark(title, url) {
+
+            if (window.sidebar) {
+
+                window.sidebar.addPanel(title, url, "");
+
+            } else if (document.all) {
+
+                window.external.AddFavorite(url, title);
+
+            } else if (window.opera && window.print) {
+
+                return true;
+
+            }
+
+        }
+
+
+
+        function setHome(url) {
+
+            if (document.all) {
+
+                document.body.style.behavior = 'url(#default#homepage)';
+
+                document.body.setHomePage(url);
+
+            } else if (window.sidebar) {
+
+                if (window.netscape) {
+
+                    try {
+
+                        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+                    } catch (e) {
+
+                        alert("该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项 signed.applets.codebase_principal_support 值该为true");
+
+                    }
+
+                }
+
+                if (window.confirm("你确定要设置" + url + "为首页吗？") == 1) {
+
+                    var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+
+                    prefs.setCharPref('browser.startup.homepage', url);
+
+                }
+
+            }
+
+        }
+        function addFavorite2() {
+            var url = window.location || 'http://www.w3cschool.cn';
+            var title = document.title;
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.indexOf("360se") > -1) {
+                alert("由于360浏览器功能限制，请按 Ctrl+D 手动收藏！");
+            }
+            else if (ua.indexOf("msie 8") > -1) {
+                window.external.AddToFavoritesBar(url, title); //IE8
+            }
+            else if (document.all) {
+                try {
+                    window.external.addFavorite(url, title);
+                } catch (e) {
+                    alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+                }
+            }
+            else if (window.sidebar) {
+                window.sidebar.addPanel(title, url, "");
+            }
+            else {
+                alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+            }
+        }
+    </script>
+
+    <a href="javascript:void(null)" onClick="setHome('//www.jb51.net');">设为首页</a> -
+    <a href="javascript:addBookmark('脚本之家','http://www.nnnnzs.cn')">加入收藏</a>
+    <a href=# onclick="javascript:addFavorite2()" rel=sidebar>加入收藏aaa</a>
+</body>
+
+</html>
