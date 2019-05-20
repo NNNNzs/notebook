@@ -1,0 +1,2020 @@
+2019-05-04 00:04:26,620 ERROR 12400 [-/127.0.0.1/-/4ms GET /getWeibo?title=12323] nodejs.TypeError: Cannot read property 'query' of undefined
+    at getWeibo.outputWeibo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:43:35)
+    at getWeibo.init (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:49:27)
+    at getWeibo.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getWeibo.js:8:54)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 12400
+hostname: Quantum
+
+2019-05-04 00:05:00,648 ERROR 15952 [-/127.0.0.1/-/5ms GET /getWeibo?title=12323] nodejs.TypeError: Cannot read property 'query' of undefined
+    at getWeibo.outputWeibo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:43:31)
+    at getWeibo.init (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:49:27)
+    at getWeibo.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getWeibo.js:8:54)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 15952
+hostname: Quantum
+
+2019-05-04 00:05:55,794 ERROR 5156 [-/127.0.0.1/-/4ms GET /getWeibo?title=12323] nodejs.TypeError: Cannot read property 'query' of undefined
+    at getWeibo.outputWeibo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:43:31)
+    at getWeibo.init (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:49:27)
+    at getWeibo.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getWeibo.js:8:54)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 5156
+hostname: Quantum
+
+2019-05-04 00:06:15,449 ERROR 2304 [-/127.0.0.1/-/5ms GET /getWeibo?title=12323] nodejs.TypeError: Cannot read property 'query' of undefined
+    at getWeibo.outputWeibo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:43:31)
+    at getWeibo.init (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:49:27)
+    at getWeibo.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getWeibo.js:8:54)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 2304
+hostname: Quantum
+
+2019-05-04 00:07:24,137 ERROR 17688 [-/127.0.0.1/-/4ms GET /getWeibo?title=12323] nodejs.TypeError: Cannot read property 'query' of undefined
+    at getWeibo.outputWeibo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:43:37)
+    at getWeibo.init (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:49:27)
+    at getWeibo.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getWeibo.js:8:54)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 17688
+hostname: Quantum
+
+2019-05-04 00:09:46,444 ERROR 15580 [-/127.0.0.1/-/4ms GET /getWeibo?title=12323] nodejs.ReferenceError: ctx is not defined
+    at getWeibo.outputWeibo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:43:21)
+    at getWeibo.init (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:49:27)
+    at getWeibo.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getWeibo.js:8:54)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 15580
+hostname: Quantum
+
+2019-05-04 00:17:29,214 ERROR 5464 [-/127.0.0.1/-/5ms GET /getWeibo] nodejs.SyntaxError: Identifier 'query' has already been declared
+    at getWeibo.init (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:50:27)
+    at getWeibo.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getWeibo.js:8:54)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+
+pid: 5464
+hostname: Quantum
+
+2019-05-04 00:18:54,208 ERROR 15472 [-/127.0.0.1/-/4ms GET /getWeibo] nodejs.SyntaxError: Identifier 'query' has already been declared
+    at getWeibo.init (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:55:27)
+    at getWeibo.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getWeibo.js:8:54)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+
+pid: 15472
+hostname: Quantum
+
+2019-05-04 00:18:54,891 ERROR 15472 [-/127.0.0.1/-/0ms GET /getWeibo] nodejs.SyntaxError: Identifier 'query' has already been declared
+    at getWeibo.init (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:55:27)
+    at getWeibo.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getWeibo.js:8:54)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+
+pid: 15472
+hostname: Quantum
+
+2019-05-04 00:19:14,959 ERROR 16952 [-/127.0.0.1/-/4ms GET /getWeibo] nodejs.SyntaxError: Identifier 'query' has already been declared
+    at getWeibo.init (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:55:27)
+    at getWeibo.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getWeibo.js:8:54)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+
+pid: 16952
+hostname: Quantum
+
+2019-05-04 00:32:59,760 ERROR 14772 [-/127.0.0.1/-/133ms GET /getWeibo] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'author' in 'field list'
+    at Query.Sequence._packetToError (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\Connection.js:525:10)
+    at Socket.emit (events.js:189:13)
+    at addChunk (_stream_readable.js:284:12)
+    --------------------
+    at Pool.query (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\Pool.js:199:23)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_pify@2.3.0@pify\index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_pify@2.3.0@pify\index.js:12:10)
+    at Pool.ret [as query] (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_pify@2.3.0@pify\index.js:56:34)
+    at RDSClient.proto._query (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_ali-rds@3.3.0@ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_ali-rds@3.3.0@ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_co@4.6.0@co\index.js:65:19)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_co@4.6.0@co\index.js:54:5
+    sql: SELECT `author`, `title` FROM `w_top` WHERE `time` IN ('[object Object]') ORDER BY `rank`
+code: "ER_BAD_FIELD_ERROR"
+errno: 1054
+sqlMessage: "Unknown column 'author' in 'field list'"
+sqlState: "42S22"
+index: 0
+sql: "SELECT `author`, `title` FROM `w_top` WHERE `time` IN ('[object Object]') ORDER BY `rank`"
+name: "ER_BAD_FIELD_ERRORError"
+pid: 14772
+hostname: Quantum
+
+2019-05-04 00:33:12,907 ERROR 15496 [-/127.0.0.1/-/127ms GET /getWeibo] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'author' in 'field list'
+    at Query.Sequence._packetToError (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\Connection.js:525:10)
+    at Socket.emit (events.js:189:13)
+    at addChunk (_stream_readable.js:284:12)
+    --------------------
+    at Pool.query (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\Pool.js:199:23)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_pify@2.3.0@pify\index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_pify@2.3.0@pify\index.js:12:10)
+    at Pool.ret [as query] (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_pify@2.3.0@pify\index.js:56:34)
+    at RDSClient.proto._query (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_ali-rds@3.3.0@ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_ali-rds@3.3.0@ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_co@4.6.0@co\index.js:65:19)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_co@4.6.0@co\index.js:54:5
+    sql: SELECT `author`, `title` FROM `w_top` WHERE `time` IN ('[object Object]') ORDER BY `rank`
+code: "ER_BAD_FIELD_ERROR"
+errno: 1054
+sqlMessage: "Unknown column 'author' in 'field list'"
+sqlState: "42S22"
+index: 0
+sql: "SELECT `author`, `title` FROM `w_top` WHERE `time` IN ('[object Object]') ORDER BY `rank`"
+name: "ER_BAD_FIELD_ERRORError"
+pid: 15496
+hostname: Quantum
+
+2019-05-04 00:33:23,421 ERROR 18712 [-/127.0.0.1/-/73ms GET /getWeibo] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'author' in 'field list'
+    at Query.Sequence._packetToError (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\Connection.js:525:10)
+    at Socket.emit (events.js:189:13)
+    at addChunk (_stream_readable.js:284:12)
+    --------------------
+    at Pool.query (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\Pool.js:199:23)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_pify@2.3.0@pify\index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_pify@2.3.0@pify\index.js:12:10)
+    at Pool.ret [as query] (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_pify@2.3.0@pify\index.js:56:34)
+    at RDSClient.proto._query (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_ali-rds@3.3.0@ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_ali-rds@3.3.0@ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_co@4.6.0@co\index.js:65:19)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_co@4.6.0@co\index.js:54:5
+    sql: SELECT `author`, `title` FROM `w_top` ORDER BY `rank`
+code: "ER_BAD_FIELD_ERROR"
+errno: 1054
+sqlMessage: "Unknown column 'author' in 'field list'"
+sqlState: "42S22"
+index: 0
+sql: "SELECT `author`, `title` FROM `w_top` ORDER BY `rank`"
+name: "ER_BAD_FIELD_ERRORError"
+pid: 18712
+hostname: Quantum
+
+2019-05-04 00:47:27,270 ERROR 14252 [-/127.0.0.1/-/6ms GET /getWeibo?title=%E9%9D%92%E6%98%A5%E8%BF%BD%E6%A2%A6] nodejs.ReferenceError: title is not defined
+    at getWeibo.outputWeibo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:44:71)
+    at getWeibo.init (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:52:27)
+    at getWeibo.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getWeibo.js:8:54)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 14252
+hostname: Quantum
+
+2019-05-04 09:41:26,295 ERROR 15308 [-/::1/-/4ms GET /getNews] nodejs.TypeError: Cannot destructure property `uniquekey` of 'undefined' or 'null'.
+    at getNews.getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:23:124)
+    at getNews.init (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:43:27)
+    at getNews.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getNews.js:9:53)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 15308
+hostname: Quantum
+
+2019-05-04 09:53:47,016 ERROR 13852 [-/::1/-/5ms GET /getNews] nodejs.TypeError: Cannot read property 'result' of undefined
+    at getNewsByApi (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:344:32)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:354:30)
+    at getNews.init (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:384:27)
+    at getNews.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getNews.js:9:53)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+
+pid: 13852
+hostname: Quantum
+
+2019-05-04 09:54:43,467 ERROR 15732 [-/::1/-/5ms GET /getNews] nodejs.TypeError: Cannot read property 'result' of undefined
+    at getNewsByApi (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:344:32)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:354:30)
+    at getNews.init (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:384:27)
+    at getNews.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getNews.js:9:53)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+
+pid: 15732
+hostname: Quantum
+
+2019-05-04 09:55:44,319 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,322 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,323 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,324 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,326 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,327 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,328 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,329 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,330 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,331 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,332 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,333 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,334 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,335 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,336 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,338 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,339 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,356 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,357 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,358 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,360 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,362 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,363 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,364 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,365 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,366 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,367 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,368 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,369 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 09:55:44,370 ERROR 6940 nodejs.unhandledRejectionError: expect request url to be a string or a http request options, but got undefined
+    at Object.requestWithCallback (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:193:11)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:151:13
+    at new Promise (<anonymous>)
+    at Object.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:150:10)
+    at HttpClient.request.HttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient.js:45:17)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\httpclient2.js:28:39)
+    at HttpClient.request (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\httpclient.js:45:18)
+    at Application.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\egg.js:283:28)
+    at ContextHttpClient.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\lib\core\context_httpclient.js:20:21)
+    at Object.curl (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg@2.22.2@egg\app\extend\context.js:48:28)
+name: "unhandledRejectionError"
+pid: 6940
+hostname: Quantum
+
+2019-05-04 10:03:00,994 ERROR 19112 [-/::1/-/5010ms GET /getNews] nodejs.ConnectionTimeoutError: Connect timeout for 5000ms, GET http://c105e49bf75c4fa1e1bbf0126a315ab6 -2 (connected: false, keepalive socket: false, agent status: {"createSocketCount":1,"createSocketErrorCount":0,"closeSocketCount":1,"errorSocketCount":0,"timeoutSocketCount":0,"requestCount":0,"freeSockets":{},"sockets":{},"requests":{}}, socketHandledRequests: 1, socketHandledResponses: 0)
+headers: {}
+headers: {}
+    at Timeout._onTimeout (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_urllib@2.33.3@urllib\lib\urllib.js:855:15)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ConnectionTimeoutError"
+requestId: 1
+data: undefined
+path: "/"
+status: -2
+headers: {}
+res: {"status":-2,"statusCode":-2,"statusMessage":null,"headers":{},"size":0,"aborted":false,"rt":5004,"keepAliveSocket":false,"requestUrls":["http://c105e49bf75c4fa1e1bbf0126a315ab6/"],"timing":null,"remoteAddress":"120.209.138.64","remotePort":"","socketHandledRequests":1,"socketHandledResponses":0}
+pid: 19112
+hostname: Quantum
+
+2019-05-04 10:08:48,316 ERROR 11228 [-/::1/-/6ms GET /getNews] nodejs.ReferenceError: getContentByUrlSync is not defined
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:357:9)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 11228
+hostname: Quantum
+
+2019-05-04 10:08:59,003 ERROR 14124 [-/::1/-/4ms GET /getNews] nodejs.ReferenceError: getContentByUrlSync is not defined
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:357:9)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 14124
+hostname: Quantum
+
+2019-05-04 10:28:31,961 ERROR 9948 [-/::1/-/5ms GET /getNews] nodejs.TypeError [ERR_INVALID_ARG_TYPE]: The "string" argument must be one of type string, Buffer, or ArrayBuffer. Received type undefined
+    at Function.byteLength (buffer.js:515:11)
+    at respond (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa@2.7.0@koa\lib\application.js:245:25)
+    at handleResponse (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa@2.7.0@koa\lib\application.js:149:34)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 9948
+hostname: Quantum
+
+2019-05-04 10:28:32,721 ERROR 9948 [-/::1/-/1ms GET /getNews] nodejs.TypeError [ERR_INVALID_ARG_TYPE]: The "string" argument must be one of type string, Buffer, or ArrayBuffer. Received type undefined
+    at Function.byteLength (buffer.js:515:11)
+    at respond (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa@2.7.0@koa\lib\application.js:245:25)
+    at handleResponse (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa@2.7.0@koa\lib\application.js:149:34)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 9948
+hostname: Quantum
+
+2019-05-04 10:29:16,380 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,381 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,382 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,383 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,383 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,384 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,384 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,385 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,386 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,386 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,387 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,388 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,388 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,389 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,389 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,390 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,390 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,391 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,391 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,392 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,392 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,393 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,393 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,394 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,395 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,395 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,395 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,396 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,396 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:16,397 ERROR 4192 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getInfoByUrl (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:374:30)
+    at dataArr.map.e (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:20)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:365:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4192
+hostname: Quantum
+
+2019-05-04 10:29:32,338 ERROR 19744 [-/::1/-/6ms GET /getNews] nodejs.TypeError [ERR_INVALID_ARG_TYPE]: The "string" argument must be one of type string, Buffer, or ArrayBuffer. Received type undefined
+    at Function.byteLength (buffer.js:515:11)
+    at respond (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa@2.7.0@koa\lib\application.js:245:25)
+    at handleResponse (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa@2.7.0@koa\lib\application.js:149:34)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 19744
+hostname: Quantum
+
+2019-05-04 10:29:33,050 ERROR 19744 [-/::1/-/1ms GET /getNews] nodejs.TypeError [ERR_INVALID_ARG_TYPE]: The "string" argument must be one of type string, Buffer, or ArrayBuffer. Received type undefined
+    at Function.byteLength (buffer.js:515:11)
+    at respond (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa@2.7.0@koa\lib\application.js:245:25)
+    at handleResponse (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa@2.7.0@koa\lib\application.js:149:34)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 19744
+hostname: Quantum
+
+2019-05-04 10:32:11,325 ERROR 4580 [-/::1/-/6ms GET /getNews] nodejs.ReferenceError: getInfoByUrl is not defined
+    at Promise.all.dataArr.map (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:368:13)
+    at Array.map (<anonymous>)
+    at getNews.getInfo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:366:49)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 4580
+hostname: Quantum
+
+2019-05-04 10:43:17,908 ERROR 9756 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 9756
+hostname: Quantum
+
+2019-05-04 11:05:42,144 ERROR 18888 nodejs.unhandledRejectionError: ER_NO_SUCH_TABLE: Table 'newslist.newlist' doesn't exist
+    at Query.Sequence._packetToError (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\Connection.js:525:10)
+    at Socket.emit (events.js:189:13)
+    at addChunk (_stream_readable.js:284:12)
+    --------------------
+    at Pool.query (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_mysql@2.17.1@mysql\lib\Pool.js:199:23)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_pify@2.3.0@pify\index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_pify@2.3.0@pify\index.js:12:10)
+    at Pool.ret [as query] (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_pify@2.3.0@pify\index.js:56:34)
+    at RDSClient.proto._query (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_ali-rds@3.3.0@ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_ali-rds@3.3.0@ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_co@4.6.0@co\index.js:65:19)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_co@4.6.0@co\index.js:54:5
+    sql: INSERT INTO `newlist`(`uniquekey`, `title`, `date`, `category`, `author_name`, `url`, `thumbnail_pic_s`, `guide`, `content`, `ins_time`) VALUES('c164e49bf75c4fa1e1bbf0126a315ab6', '测试测试', '2019-05-04 18:22', '测试', 'NNNNzs', 'http://mini.eastday.com/mobile/190504092248307.html', 'http://06imgmini.eastday.com/mobile/20190504/20190504092248_eeb0d88d0eb5069bf36d2ffc0ea51e9f_1_mwpm_03200403.jpg', '河北保定阜平县卞家峪村，阳光充足，土是风化的片麻岩土壤，这儿产的大枣口感好、产量高，全村千余口人世代以种枣为生。可老天爷也爱变脸，近七八年来，一到收获时节，总是风雨交加，眼看大枣烂在地里，村民们只能干抹眼泪。', '\n<figure class=\"section img\">\n<a class=\"img-wrap\" style=\"padding-bottom: 56.52%;\" data-href=\"https://06imgmini.eastday.com/mobile/20190504/20190504092248_eeb0d88d0eb5069bf36d2ffc0ea51e9f_1.jpeg\" data-size=\"690x390\">\n<img width=\"100%\" alt src=\"https://06imgmini.eastday.com/mobile/20190504/20190504092248_eeb0d88d0eb5069bf36d2ffc0ea51e9f_1.jpeg\" data-weight=\"690\" data-width=\"690\" data-height=\"390\">\n</a>\n</figure>\n<p class=\"section txt\">河北保定阜平县卞家峪村，阳光充足，土是风化的片麻岩土壤，这儿产的大枣口感好、产量高，全村千余口人世代以种枣为生。可老天爷也爱变脸，近七八年来，一到收获时节，总是风雨交加，眼看大枣烂在地里，村民们只能干抹眼泪。</p>\n<p class=\"section txt\">转变发生在2015年夏天，李二国带着独创的大枣特色保险来到了卞家峪。</p>\n<p class=\"section txt\">“一亩枣树保费36元，政府补贴21块6，您自个儿缴14块4，如果受灾，我们一株赔您10块钱。”李二国带着团队挨家挨户宣传。</p>\n<p class=\"section txt\">山里人没听过保险，有的把李二国当成骗子，连连往门外赶。</p>\n<p class=\"section txt\">李二国没有退缩。最终，53岁的杨金成被说服，决定试一把。他边用粗糙的手数着毛票，边跟李二国嘀咕：“您说是政府鼓励的事儿，总不至于骗人吧？”当年秋天，又是雨水天气，连日雨水把成熟的红枣浇得裂开了口。看着腐烂的大枣，想着一年的辛苦、买农药的钱、雇人的工钱……杨金成忍不住抹起了眼泪。</p>\n<p class=\"section txt\">正当杨金成发愁时，火速赶到的李二国带来了农险查勘员，勘察确认受损情况后，第一时间将6800多元理赔款送到杨金成手上。拿到理赔款的杨金成两眼泪花，紧紧握着李二国等人的手道：“多亏了你们！”</p>\n<p class=\"section txt\">第二年，卞家峪村8000多亩枣树全部上了保险。</p>\n<p class=\"section txt\">阜平是国家级贫困县，作为地地道道的阜平人，帮助乡亲们摆脱贫困、过上好日子是李二国的心愿。本着这份初心，李二国带领中国人保财险河北保定阜平支公司开始了探索，摸索出保险扶贫的“阜平模式”：成本损失保险、农产品质量责任险、“三农”保险……各类首创、独创险种覆盖了阜平主要种养产品，为乡亲们抵抗自然灾害、市场变化、意外伤害提供保障。</p>\n<p class=\"section txt\">2018年全年，李二国和她的团队共为阜平办理保险24802单，覆盖13个乡镇168个村，涉及6.1万农户，保费收入8720.04万元，保险金额755.91亿元，提供风险赔偿3874.67万元。</p>\n<p class=\"section txt\">如今，阜平县乡亲们的收入节节高，贫困人口从2014年的10.8万人减少到2018年的3.57万人，贫困发生率由54.4%下降到18.6%。</p>\n<p class=\"section txt\">更让李二国欣喜的是，保险扶贫“阜平模式”得到了广泛关注。</p>\n<p class=\"section txt\">2018年12月，人保财险河北保定阜平支公司“李二国工作室”被中国金融工会命名为全国金融系统创新工作室……</p>\n<p class=\"section txt\">今年，阜平县有望整体脱贫摘帽，可这位身材娇小的女子说：“放松不得，保险还得防返贫。”</p>\n\n', '2019-05-04 11:05:41.666')
+code: "ER_NO_SUCH_TABLE"
+errno: 1146
+sqlMessage: "Table 'newslist.newlist' doesn't exist"
+sqlState: "42S02"
+index: 0
+sql: "INSERT INTO `newlist`(`uniquekey`, `title`, `date`, `category`, `author_name`, `url`, `thumbnail_pic_s`, `guide`, `content`, `ins_time`) VALUES('c164e49bf75c4fa1e1bbf0126a315ab6', '测试测试', '2019-05-04 18:22', '测试', 'NNNNzs', 'http://mini.eastday.com/mobile/190504092248307.html', 'http://06imgmini.eastday.com/mobile/20190504/20190504092248_eeb0d88d0eb5069bf36d2ffc0ea51e9f_1_mwpm_03200403.jpg', '河北保定阜平县卞家峪村，阳光充足，土是风化的片麻岩土壤，这儿产的大枣口感好、产量高，全村千余口人世代以种枣为生。可老天爷也爱变脸，近七八年来，一到收获时节，总是风雨交加，眼看大枣烂在地里，村民们只能干抹眼泪。', '\\n<figure class=\\\"section img\\\">\\n<a class=\\\"img-wrap\\\" style=\\\"padding-bottom: 56.52%;\\\" data-href=\\\"https://06imgmini.eastday.com/mobile/20190504/20190504092248_eeb0d88d0eb5069bf36d2ffc0ea51e9f_1.jpeg\\\" data-size=\\\"690x390\\\">\\n<img width=\\\"100%\\\" alt src=\\\"https://06imgmini.eastday.com/mobile/20190504/20190504092248_eeb0d88d0eb5069bf36d2ffc0ea51e9f_1.jpeg\\\" data-weight=\\\"690\\\" data-width=\\\"690\\\" data-height=\\\"390\\\">\\n</a>\\n</figure>\\n<p class=\\\"section txt\\\">河北保定阜平县卞家峪村，阳光充足，土是风化的片麻岩土壤，这儿产的大枣口感好、产量高，全村千余口人世代以种枣为生。可老天爷也爱变脸，近七八年来，一到收获时节，总是风雨交加，眼看大枣烂在地里，村民们只能干抹眼泪。</p>\\n<p class=\\\"section txt\\\">转变发生在2015年夏天，李二国带着独创的大枣特色保险来到了卞家峪。</p>\\n<p class=\\\"section txt\\\">“一亩枣树保费36元，政府补贴21块6，您自个儿缴14块4，如果受灾，我们一株赔您10块钱。”李二国带着团队挨家挨户宣传。</p>\\n<p class=\\\"section txt\\\">山里人没听过保险，有的把李二国当成骗子，连连往门外赶。</p>\\n<p class=\\\"section txt\\\">李二国没有退缩。最终，53岁的杨金成被说服，决定试一把。他边用粗糙的手数着毛票，边跟李二国嘀咕：“您说是政府鼓励的事儿，总不至于骗人吧？”当年秋天，又是雨水天气，连日雨水把成熟的红枣浇得裂开了口。看着腐烂的大枣，想着一年的辛苦、买农药的钱、雇人的工钱……杨金成忍不住抹起了眼泪。</p>\\n<p class=\\\"section txt\\\">正当杨金成发愁时，火速赶到的李二国带来了农险查勘员，勘察确认受损情况后，第一时间将6800多元理赔款送到杨金成手上。拿到理赔款的杨金成两眼泪花，紧紧握着李二国等人的手道：“多亏了你们！”</p>\\n<p class=\\\"section txt\\\">第二年，卞家峪村8000多亩枣树全部上了保险。</p>\\n<p class=\\\"section txt\\\">阜平是国家级贫困县，作为地地道道的阜平人，帮助乡亲们摆脱贫困、过上好日子是李二国的心愿。本着这份初心，李二国带领中国人保财险河北保定阜平支公司开始了探索，摸索出保险扶贫的“阜平模式”：成本损失保险、农产品质量责任险、“三农”保险……各类首创、独创险种覆盖了阜平主要种养产品，为乡亲们抵抗自然灾害、市场变化、意外伤害提供保障。</p>\\n<p class=\\\"section txt\\\">2018年全年，李二国和她的团队共为阜平办理保险24802单，覆盖13个乡镇168个村，涉及6.1万农户，保费收入8720.04万元，保险金额755.91亿元，提供风险赔偿3874.67万元。</p>\\n<p class=\\\"section txt\\\">如今，阜平县乡亲们的收入节节高，贫困人口从2014年的10.8万人减少到2018年的3.57万人，贫困发生率由54.4%下降到18.6%。</p>\\n<p class=\\\"section txt\\\">更让李二国欣喜的是，保险扶贫“阜平模式”得到了广泛关注。</p>\\n<p class=\\\"section txt\\\">2018年12月，人保财险河北保定阜平支公司“李二国工作室”被中国金融工会命名为全国金融系统创新工作室……</p>\\n<p class=\\\"section txt\\\">今年，阜平县有望整体脱贫摘帽，可这位身材娇小的女子说：“放松不得，保险还得防返贫。”</p>\\n\\n', '2019-05-04 11:05:41.666')"
+name: "unhandledRejectionError"
+pid: 18888
+hostname: Quantum
+
+2019-05-04 11:09:47,112 ERROR 16228 [-/::1/-/111ms GET /getNews] nodejs.TypeError: Cannot read property 'stat' of undefined
+    at getNewsByApi (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:16:20)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 16228
+hostname: Quantum
+
+2019-05-04 11:10:11,451 ERROR 732 [-/::1/-/129ms GET /getNews] nodejs.TypeError: Cannot read property 'stat' of undefined
+    at getNewsByApi (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:17:20)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 732
+hostname: Quantum
+
+2019-05-04 16:49:59,879 ERROR 19340 [-/::1/-/4ms GET /ai] nodejs.TypeError: Cannot set property 'app_id' of undefined
+    at ai.getAnswer (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\ai.js:29:26)
+    at ai.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\ai.js:43:27)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+
+pid: 19340
+hostname: Quantum
+
+2019-05-04 16:50:27,083 ERROR 2036 [-/::1/-/4ms GET /ai] nodejs.TypeError: Cannot set property 'app_id' of undefined
+    at ai.getAnswer (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\ai.js:29:21)
+    at ai.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\ai.js:43:27)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+
+pid: 2036
+hostname: Quantum
+
+2019-05-04 16:50:54,585 ERROR 20972 [-/::1/-/4ms GET /ai] nodejs.SyntaxError: Identifier 'data' has already been declared
+    at ai.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\ai.js:44:27)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+
+pid: 20972
+hostname: Quantum
+
+2019-05-04 16:51:31,662 ERROR 444 [-/::1/-/4ms GET /ai] nodejs.ReferenceError: crypto is not defined
+    at ai.getReqSign (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\ai.js:24:20)
+    at ai.getAnswer (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\ai.js:32:26)
+    at ai.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\ai.js:43:27)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 444
+hostname: Quantum
+
+2019-05-04 16:51:48,243 ERROR 18808 [-/::1/-/5ms GET /ai] nodejs.ReferenceError: sayHello is not defined
+    at ai.getAnswer (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\ai.js:37:32)
+    at ai.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\ai.js:44:27)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+
+pid: 18808
+hostname: Quantum
+
+2019-05-11 17:54:20,154 ERROR 8152 nodejs.ReferenceError: axios is not defined
+    at getAccessToken (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:13:23)
+    at Message.dingding (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:16:22)
+    at HomeController.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\home.js:13:42)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 8152
+hostname: Quantum
+
+2019-05-11 17:54:20,793 ERROR 8152 nodejs.ReferenceError: axios is not defined
+    at getAccessToken (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:13:23)
+    at Message.dingding (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:16:22)
+    at HomeController.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\home.js:13:42)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 8152
+hostname: Quantum
+
+2019-05-11 17:54:21,219 ERROR 8152 nodejs.ReferenceError: axios is not defined
+    at getAccessToken (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:13:23)
+    at Message.dingding (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:16:22)
+    at HomeController.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\home.js:13:42)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 8152
+hostname: Quantum
+
+2019-05-11 17:54:21,425 ERROR 8152 nodejs.ReferenceError: axios is not defined
+    at getAccessToken (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:13:23)
+    at Message.dingding (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:16:22)
+    at HomeController.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\home.js:13:42)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 8152
+hostname: Quantum
+
+2019-05-11 17:54:21,633 ERROR 8152 nodejs.ReferenceError: axios is not defined
+    at getAccessToken (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:13:23)
+    at Message.dingding (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:16:22)
+    at HomeController.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\home.js:13:42)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 8152
+hostname: Quantum
+
+2019-05-11 17:54:21,818 ERROR 8152 nodejs.ReferenceError: axios is not defined
+    at getAccessToken (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:13:23)
+    at Message.dingding (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:16:22)
+    at HomeController.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\home.js:13:42)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 8152
+hostname: Quantum
+
+2019-05-11 17:54:22,040 ERROR 8152 nodejs.ReferenceError: axios is not defined
+    at getAccessToken (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:13:23)
+    at Message.dingding (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:16:22)
+    at HomeController.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\home.js:13:42)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 8152
+hostname: Quantum
+
+2019-05-11 17:54:23,574 ERROR 8152 nodejs.ReferenceError: axios is not defined
+    at getAccessToken (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:13:23)
+    at Message.dingding (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:16:22)
+    at HomeController.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\home.js:13:42)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 8152
+hostname: Quantum
+
+2019-05-11 17:54:48,815 ERROR 7408 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getAccessToken (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:13:34)
+    at Message.dingding (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:16:22)
+    at HomeController.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\home.js:13:42)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 7408
+hostname: Quantum
+
+2019-05-11 17:54:49,394 ERROR 7408 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getAccessToken (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:13:34)
+    at Message.dingding (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:16:22)
+    at HomeController.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\home.js:13:42)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 7408
+hostname: Quantum
+
+2019-05-11 17:54:49,866 ERROR 7408 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getAccessToken (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:13:34)
+    at Message.dingding (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:16:22)
+    at HomeController.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\home.js:13:42)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 7408
+hostname: Quantum
+
+2019-05-11 17:54:50,104 ERROR 7408 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getAccessToken (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:13:34)
+    at Message.dingding (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:16:22)
+    at HomeController.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\home.js:13:42)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 7408
+hostname: Quantum
+
+2019-05-11 17:54:50,295 ERROR 7408 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getAccessToken (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:13:34)
+    at Message.dingding (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:16:22)
+    at HomeController.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\home.js:13:42)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 7408
+hostname: Quantum
+
+2019-05-11 17:54:50,488 ERROR 7408 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getAccessToken (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:13:34)
+    at Message.dingding (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:16:22)
+    at HomeController.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\home.js:13:42)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 7408
+hostname: Quantum
+
+2019-05-11 17:55:24,366 ERROR 3836 nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getAccessToken (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:13:34)
+    at Message.dingding (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:16:22)
+    at HomeController.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\home.js:13:42)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 3836
+hostname: Quantum
+
+2019-05-11 17:58:53,827 ERROR 8836 [-/127.0.0.1/-/5ms GET /] nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at getAccessToken (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:13:34)
+    at Message.dingding (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:16:22)
+    at HomeController.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\home.js:13:44)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 8836
+hostname: Quantum
+
+2019-05-11 18:00:38,126 ERROR 7932 [-/127.0.0.1/-/4ms GET /] nodejs.TypeError: Cannot read property 'dingding' of undefined
+    at HomeController.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\home.js:13:44)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+
+pid: 7932
+hostname: Quantum
+
+2019-05-11 18:01:00,028 ERROR 7932 [-/127.0.0.1/-/1ms GET /] nodejs.TypeError: Cannot read property 'dingding' of undefined
+    at HomeController.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\home.js:13:44)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+
+pid: 7932
+hostname: Quantum
+
+2019-05-11 18:02:52,409 ERROR 11016 [-/127.0.0.1/-/6ms GET /] nodejs.TypeError [ERR_INVALID_ARG_TYPE]: The "string" argument must be one of type string, Buffer, or ArrayBuffer. Received type undefined
+    at Function.byteLength (buffer.js:515:11)
+    at respond (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa@2.7.0@koa\lib\application.js:245:25)
+    at handleResponse (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa@2.7.0@koa\lib\application.js:149:34)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 11016
+hostname: Quantum
+
+2019-05-12 10:43:59,628 ERROR 9888 [-/::1/-/5ms GET /] nodejs.TypeError: Cannot read property 'getAccessToken' of undefined
+    at sendText (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:19:36)
+    at Message.dingding (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:34:22)
+    at HomeController.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\home.js:13:44)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 9888
+hostname: Quantum
+
+2019-05-12 11:17:50,552 ERROR 6440 [-/::1/-/4ms GET /] nodejs.TypeError: Cannot read property 'getAccessToken' of undefined
+    at sendText (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:21:36)
+    at Message.dingding (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\sendMsg.js:60:22)
+    at HomeController.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\home.js:13:44)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 6440
+hostname: Quantum
+
+2019-05-12 14:35:41,696 ERROR 10716 [-/::1/-/1ms GET /getWeibo] nodejs.ReferenceError: app is not defined
+    at getWeibo.outputWeibo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:60:40)
+    at getWeibo.init (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:64:27)
+    at getWeibo.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getWeibo.js:8:54)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 10716
+hostname: Quantum
+
+2019-05-12 14:37:16,330 ERROR 836 [-/::1/-/4ms GET /getWeibo] nodejs.ReferenceError: app is not defined
+    at getWeibo.outputWeibo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:60:40)
+    at getWeibo.init (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:64:27)
+    at getWeibo.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getWeibo.js:8:54)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 836
+hostname: Quantum
+
+2019-05-12 14:37:27,189 ERROR 1836 [-/::1/-/4ms GET /getWeibo] nodejs.ReferenceError: app is not defined
+    at getWeibo.outputWeibo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:60:40)
+    at getWeibo.init (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:64:27)
+    at getWeibo.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getWeibo.js:8:54)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 1836
+hostname: Quantum
+
+2019-05-12 14:38:14,947 ERROR 15604 [-/::1/-/6ms GET /getWeibo] nodejs.ReferenceError: app is not defined
+    at getWeibo.outputWeibo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:60:40)
+    at getWeibo.init (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:64:27)
+    at getWeibo.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getWeibo.js:8:54)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 15604
+hostname: Quantum
+
+2019-05-12 14:38:15,727 ERROR 4560 [-/::1/-/5ms GET /getWeibo] nodejs.ReferenceError: app is not defined
+    at getWeibo.outputWeibo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:60:40)
+    at getWeibo.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getWeibo.js:8:54)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+
+pid: 4560
+hostname: Quantum
+
+2019-05-12 14:40:05,040 ERROR 12700 [-/::1/-/5ms GET /getWeibo] nodejs.ReferenceError: app is not defined
+    at getWeibo.outputWeibo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:60:44)
+    at getWeibo.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getWeibo.js:8:54)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+
+pid: 12700
+hostname: Quantum
+
+2019-05-12 14:40:45,493 ERROR 12700 [-/::1/-/1ms GET /getWeibo] nodejs.ReferenceError: app is not defined
+    at getWeibo.outputWeibo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:60:44)
+    at getWeibo.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getWeibo.js:8:54)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+
+pid: 12700
+hostname: Quantum
+
+2019-05-12 14:40:58,489 ERROR 13732 [-/::1/-/4ms GET /getWeibo] nodejs.ReferenceError: app is not defined
+    at getWeibo.outputWeibo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:61:28)
+    at getWeibo.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getWeibo.js:8:54)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+
+pid: 13732
+hostname: Quantum
+
+2019-05-12 14:41:05,435 ERROR 13732 [-/::1/-/0ms GET /getWeibo] nodejs.ReferenceError: app is not defined
+    at getWeibo.outputWeibo (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getWeibo.js:61:28)
+    at getWeibo.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getWeibo.js:8:54)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+
+pid: 13732
+hostname: Quantum
+
+2019-05-12 15:11:11,519 ERROR 11900 [egg-redis] client error: Error: connect ECONNREFUSED 120.78.182.84:6379
+2019-05-12 15:11:11,527 ERROR 11900 nodejs.ECONNREFUSEDError: connect ECONNREFUSED 120.78.182.84:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1097:14)
+errno: "ECONNREFUSED"
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "120.78.182.84"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 11900
+hostname: Quantum
+
+2019-05-12 15:11:12,747 ERROR 11900 [egg-redis] client error: Error: connect ECONNREFUSED 120.78.182.84:6379
+2019-05-12 15:11:12,749 ERROR 11900 nodejs.ECONNREFUSEDError: connect ECONNREFUSED 120.78.182.84:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1097:14)
+errno: "ECONNREFUSED"
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "120.78.182.84"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 11900
+hostname: Quantum
+
+2019-05-12 15:11:13,999 ERROR 11900 [egg-redis] client error: Error: connect ECONNREFUSED 120.78.182.84:6379
+2019-05-12 15:11:13,999 ERROR 11900 nodejs.ECONNREFUSEDError: connect ECONNREFUSED 120.78.182.84:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1097:14)
+errno: "ECONNREFUSED"
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "120.78.182.84"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 11900
+hostname: Quantum
+
+2019-05-12 15:11:24,201 ERROR 11900 [egg-redis] client error: Error: connect ETIMEDOUT
+2019-05-12 15:11:24,202 ERROR 11900 nodejs.ETIMEDOUTError: connect ETIMEDOUT
+    at Socket.<anonymous> (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_ioredis@4.9.3@ioredis\built\redis.js:298:31)
+    at Object.onceWrapper (events.js:277:13)
+    at Socket.emit (events.js:189:13)
+    at Socket._onTimeout (net.js:440:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+errorno: "ETIMEDOUT"
+code: "ETIMEDOUT"
+syscall: "connect"
+name: "ETIMEDOUTError"
+pid: 11900
+hostname: Quantum
+
+2019-05-12 15:11:34,454 ERROR 11900 [egg-redis] client error: Error: connect ETIMEDOUT
+2019-05-12 15:11:34,456 ERROR 11900 nodejs.ETIMEDOUTError: connect ETIMEDOUT
+    at Socket.<anonymous> (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_ioredis@4.9.3@ioredis\built\redis.js:298:31)
+    at Object.onceWrapper (events.js:277:13)
+    at Socket.emit (events.js:189:13)
+    at Socket._onTimeout (net.js:440:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+errorno: "ETIMEDOUT"
+code: "ETIMEDOUT"
+syscall: "connect"
+name: "ETIMEDOUTError"
+pid: 11900
+hostname: Quantum
+
+2019-05-12 15:11:44,763 ERROR 11900 [egg-redis] client error: Error: connect ETIMEDOUT
+2019-05-12 15:11:44,765 ERROR 11900 nodejs.ETIMEDOUTError: connect ETIMEDOUT
+    at Socket.<anonymous> (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_ioredis@4.9.3@ioredis\built\redis.js:298:31)
+    at Object.onceWrapper (events.js:277:13)
+    at Socket.emit (events.js:189:13)
+    at Socket._onTimeout (net.js:440:8)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+errorno: "ETIMEDOUT"
+code: "ETIMEDOUT"
+syscall: "connect"
+name: "ETIMEDOUTError"
+pid: 11900
+hostname: Quantum
+
+2019-05-12 15:11:48,692 ERROR 11900 [egg-redis] client error: Error: connect ECONNREFUSED 120.78.182.84:6379
+2019-05-12 15:11:48,693 ERROR 11900 nodejs.ECONNREFUSEDError: connect ECONNREFUSED 120.78.182.84:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1097:14)
+errno: "ECONNREFUSED"
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "120.78.182.84"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 11900
+hostname: Quantum
+
+2019-05-12 15:39:08,238 ERROR 15768 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 15768
+hostname: Quantum
+
+2019-05-12 17:44:00,233 ERROR 3792 [-/127.0.0.1/-/6ms GET /chat?q=%E4%BD%A0%E5%A5%BD%E5%95%8A] nodejs.ReferenceError: getAnswer is not defined
+    at TencentAI.chat (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\ai.js:44:27)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+
+pid: 3792
+hostname: Quantum
+
+2019-05-12 17:45:15,944 ERROR 17196 [-/127.0.0.1/-/780ms GET /chat?q=%E4%BD%A0%E5%A5%BD%E5%95%8A] nodejs.TypeError: Converting circular structure to JSON
+    at JSON.stringify (<anonymous>)
+    at respond (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa@2.7.0@koa\lib\application.js:243:15)
+    at handleResponse (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa@2.7.0@koa\lib\application.js:149:34)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 17196
+hostname: Quantum
+
+2019-05-12 17:45:35,130 ERROR 3076 [-/127.0.0.1/-/822ms GET /chat?q=%E4%BD%A0%E5%A5%BD%E5%95%8A] nodejs.TypeError: Converting circular structure to JSON
+    at JSON.stringify (<anonymous>)
+    at respond (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa@2.7.0@koa\lib\application.js:243:15)
+    at handleResponse (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa@2.7.0@koa\lib\application.js:149:34)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 3076
+hostname: Quantum
+
+2019-05-12 20:15:00,958 ERROR 1060 [-/127.0.0.1/-/6ms GET /getNews] nodejs.ReferenceError: sqlQuery is not defined
+    at getNews.outputNews (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:67:22)
+    at getNews.init (D:\document\desktop\随身的笔记本\myegg\myegg\app\service\getNews.js:72:27)
+    at getNews.index (D:\document\desktop\随身的笔记本\myegg\myegg\app\controller\getNews.js:9:53)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-core@4.17.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+
+pid: 1060
+hostname: Quantum
+
+2019-05-12 21:53:33,404 ERROR 1620 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 1620
+hostname: Quantum
+
+2019-05-12 21:53:34,643 ERROR 1620 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 1620
+hostname: Quantum
+
+2019-05-12 21:53:34,708 ERROR 1620 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 1620
+hostname: Quantum
+
+2019-05-12 21:53:35,915 ERROR 1620 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 1620
+hostname: Quantum
+
+2019-05-12 21:53:36,059 ERROR 1620 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 1620
+hostname: Quantum
+
+2019-05-12 22:08:38,902 ERROR 15432 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 15432
+hostname: Quantum
+
+2019-05-12 22:08:40,146 ERROR 15432 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 15432
+hostname: Quantum
+
+2019-05-12 22:08:40,273 ERROR 15432 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 15432
+hostname: Quantum
+
+2019-05-12 22:08:41,447 ERROR 15432 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 15432
+hostname: Quantum
+
+2019-05-12 22:08:41,554 ERROR 15432 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 15432
+hostname: Quantum
+
+2019-05-12 22:08:42,688 ERROR 15432 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 15432
+hostname: Quantum
+
+2019-05-12 22:08:43,284 ERROR 15432 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 15432
+hostname: Quantum
+
+2019-05-12 22:08:44,443 ERROR 15432 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 15432
+hostname: Quantum
+
+2019-05-12 22:08:44,946 ERROR 15432 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 15432
+hostname: Quantum
+
+2019-05-12 22:10:07,775 ERROR 13136 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 13136
+hostname: Quantum
+
+2019-05-12 22:10:08,992 ERROR 13136 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 13136
+hostname: Quantum
+
+2019-05-12 22:10:11,172 ERROR 13136 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:111:27)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 13136
+hostname: Quantum
+

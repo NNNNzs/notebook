@@ -1,0 +1,20 @@
+2019-05-03 23:35:35,361 INFO 6108 [egg-schedule]: register schedule D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2019-05-03 23:35:35,361 INFO 6108 [egg-schedule]: register schedule D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2019-05-03 23:35:35,757 INFO 6108 [Timer] D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js next time will execute after 1464245ms at 2019-05-04 00:00:00.002
+2019-05-03 23:35:35,757 INFO 6108 [Timer] D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 1465243ms at 2019-05-04 00:00:01.000
+2019-05-03 23:57:01,274 INFO 12052 [Timer] D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js next time will execute after 178729ms at 2019-05-04 00:00:00.003
+2019-05-03 23:57:01,274 INFO 12052 [Timer] D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 179726ms at 2019-05-04 00:00:01.000
+2019-05-03 23:57:00,867 INFO 14136 [egg-schedule]: register schedule D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2019-05-03 23:57:00,867 INFO 14136 [egg-schedule]: register schedule D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2019-05-03 23:57:02,209 INFO 20904 [egg-schedule]: register schedule D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2019-05-03 23:57:02,209 INFO 20904 [egg-schedule]: register schedule D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2019-05-03 23:57:36,915 INFO 7312 [egg-schedule]: register schedule D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2019-05-03 23:57:36,915 INFO 7312 [egg-schedule]: register schedule D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2019-05-03 23:57:50,773 INFO 19504 [egg-schedule]: register schedule D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2019-05-03 23:57:50,773 INFO 19504 [egg-schedule]: register schedule D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2019-05-04 00:00:00,004 INFO 19504 [Job#155689920000310536657223522001] D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js executing by app
+2019-05-04 00:00:00,007 INFO 19504 [Job#155689920000310536657223522001] D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js execute succeed, used 3ms
+2019-05-04 00:00:00,005 INFO 12052 [Timer] D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js next time will execute after 86399997ms at 2019-05-05 00:00:00.002
+2019-05-04 00:00:01,002 INFO 19504 [Job#155689920100110536667205397001] D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js executing by app
+2019-05-04 00:00:01,006 INFO 19504 [Job#155689920100110536667205397001] D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js execute succeed, used 4ms
+2019-05-04 00:00:01,003 INFO 12052 [Timer] D:\document\desktop\随身的笔记本\myegg\myegg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 86399998ms at 2019-05-05 00:00:01.001
