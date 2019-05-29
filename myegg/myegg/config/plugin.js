@@ -13,7 +13,7 @@ module.exports = {
   alinode: {
     enable: true,
     package: 'egg-alinode',
-    env:['prod']
+    env: ['prod']
   },
   mysql: {
     enable: true,
@@ -22,5 +22,9 @@ module.exports = {
   redis: {
     enable: true,
     package: 'egg-redis',
+  },
+  cors: {
+    enable: true,
+    package: 'egg-cors',
   }
 };
