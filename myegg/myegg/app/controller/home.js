@@ -19,6 +19,17 @@ class HomeController extends Controller {
     // this.ctx.body = newsList
     // const title = newsList[0].title;
     // await ctx.render('weibo/index.tpl', {list:newsList});
+  };
+  async git(){
+    const { ctx ,app } = this;
+    let postDate = this.ctx.request.body;
+    if(Object.keys(postDate).length===0){
+      // let a = await this.ctx.service.sendMsg.dingding('git提交',s,'git推送提示');
+      this.ctx.body = '无传参'
+    }else{
+      await this.ctx.service.sendMsg.dingding('git提交',JSON.stringify(postDate),'git推送提示')
+      this.ctx.body = postDate
+    }
   }
 }
 
