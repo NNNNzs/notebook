@@ -7,7 +7,7 @@ class Message extends Service {
         const data = await this.ctx.curl(`https://sc.ftqq.com/SCU36847T91a389aca957b1bf554b2e728328d1185c029f702c10b.send?text=${title}&desp=${content}${new Date()}`, { dataType: 'json' });
         return data;
     }
-    async dingding({title,content,author}) {
+    async dingding(title,content,author) {
         const { ctx } = this;
         const baseUrl = 'https://oapi.dingtalk.com'
         async function getAccessToken() {
@@ -17,11 +17,11 @@ class Message extends Service {
             let res = await ctx.curl(url, { dataType: 'json' });
             return res.data.access_token;
         }
-        async function sendText({title,content,author}) {
+        async function sendText(title,content,author) {
             let userid_list = "manager1688";
             let agent_id = 252661904;//通用消息通知的agent_id
             let token = await getAccessToken()
-            let url = `${baseUrl}/topapi/message/corpconversation/asyncsend_v2?access_token=${token}`
+            let url = `${baseUrl}/topapi/message/corpconversation/asyncsend_v2?access_token=${token}`;
             let res = await ctx.curl(url, {
                 dataType: 'json',
                 contentType: 'json',
@@ -50,7 +50,7 @@ class Message extends Service {
                                     }
                                 ],
                                 "content": content,
-                                author: author
+                                'author': author
                             }
                         },
                     }
@@ -58,7 +58,8 @@ class Message extends Service {
             });
             return res;
         }
-        return await sendText({title,content,author});
+        console.log(title,content,author)
+        return await sendText(title,content,author);
     }
 }
 

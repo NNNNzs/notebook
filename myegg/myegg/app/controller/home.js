@@ -30,6 +30,10 @@ class HomeController extends Controller {
       await this.ctx.service.sendMsg.dingding('git提交',JSON.stringify(postDate),'git推送提示')
       this.ctx.body = postDate
     }
+  };
+  async sendDD(){
+    let content = this.ctx.request.body.content
+    this.ctx.body = await this.ctx.service.sendMsg.dingding('git提交',content,'git推送提示')
   }
 }
 

@@ -10,5 +10,6 @@ module.exports = app => {
   router.get('/getNews', controller.getNews.index);
   router.get('/getWeibo', controller.getWeibo.index);
   router.get('/chat',controller.ai.chat);
-  router.post('/git',controller.home.git)
+  router.post('/git',controller.home.git);
+  router.post('/dd',controller.home.sendDD)
 };
