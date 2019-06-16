@@ -1,20 +1,27 @@
 const fs = require('fs');
 var ExifImage = require('exif').ExifImage
 
-async function stream(src) {
-    let imgArray = await readDir(src);
-    let imgs = []
-    imgArray.forEach(element => {
-        let imgDate = fs.readFileSync(src + '/' + element);
-        let s = readImgExif(imgDate)
-        console.log(s)
-        // .then(imgEXIF=>{
-        //     let img = {'src':src+'/'+element,'name':element,'exif':imgEXIF};
-        //     imgs.push(img)
-        // })
-    });
+async function stream() {
+    // let imgArray = await readDir(src);
+    // let imgs = []
+    // imgArray.forEach(element => {
+    // let imgDate = fs.readFileSync(src + '/' + element);
+    let imgDate = fs.readFileSync('img/P80221-162354.jpg');
+    let s = readImgExif(imgDate).then(res => {
+        // console.log(res.gps)
+        let gps = res.gps
+        let GPSLatitude = `${gps.GPSLatitude[0]}°${gps.GPSLatitude[1]}'${gps.GPSLatitude[2]}''${gps.GPSLatitudeRef}`
+        let GPSLongitude = `${gps.GPSLongitude[0]}°${gps.GPSLongitude[1]}'${gps.GPSLongitude[2]}''${gps.GPSLongitudeRef}`
+        console.log(`${GPSLatitude},${GPSLongitude}`)
+    })
+    // console.log(s)
+    // .then(imgEXIF=>{
+    //     let img = {'src':src+'/'+element,'name':element,'exif':imgEXIF};
+    //     imgs.push(img)
+    // })
+    // });
 }
-stream('img')
+stream()
 
 
 
@@ -60,9 +67,9 @@ async function readImgExif(imgDate) {
 
 
 function getAa000000() {
-    function getA(){
+    function getA() {
         var ranNum = Math.ceil(Math.random() * 25); //生成一个0到25的数字
         return String.fromCharCode(65 + ranNum)//生成A-Z
     }
-    return getA()+getA().toLowerCase()+Math.ceil(Math.random() * 999999)
+    return getA() + getA().toLowerCase() + Math.ceil(Math.random() * 999999)
 }
