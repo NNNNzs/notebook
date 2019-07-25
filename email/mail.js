@@ -1,11 +1,11 @@
 const nodemailer = require('nodemailer');
 const transport = nodemailer.createTransport({
-    host:'smtp.qq.com',
+    host:'smtp.exmail.qq.com',
     secureConnection:true,
     port:465,
     auth:{
-        user:'nnnnzs@vip.qq.com',
-        pass:'xrvvnoybowaxbbhi'
+        user:'nizongshan@bz.cn',
+        pass:'NNNNzs1997'
     }
 });
 var html = `
@@ -27,8 +27,8 @@ var html = `
 
 `
 var mailOptions={
-    from:'NNNNzs nnnnzs@vip.qq.com',
-    to:'709934831@qq.com',
+    from:'nizongshan@bz.cn',
+    to:'wangyang@bz.cn',
     subject:'Hello',
     text:'hello',
     html:html,
