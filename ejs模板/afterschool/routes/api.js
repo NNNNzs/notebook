@@ -10,6 +10,15 @@ var path = require('path');
 var crypto = require('crypto');
 //从upload中获取文件
 
+
+router.all("*", function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", req.headers.origin); //把来路域名设为可以跨域
+    res.header("Access-Control-Allow-Methods", "PUT, GET, POST, DELETE, OPTIONS");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.header("Access-Control-Allow-Headers", "Content-Type");
+    res.header("Access-Control-Allow-Credentials", "true")
+    next();
+});
 /* GET home page. */
 router.get('/', function (req, res, next) {
     let db = mysql.readDB()
@@ -18,10 +27,12 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/rel', upload.fields([{ name: 'inputFile', maxCount: 1 }]), function (req, res, next) {
+    console.log(1)
     let inputFiles = req.files
     //读取文件内容
     let file = inputFiles['inputFile'][0]//实际文件
-    let extname = path.extname(file.originalname);//后缀名
+    let extname = path.extname(file.originalname)||'.png';//后缀名
+    console.log(extname)
     let md5Name = crypto.createHash('md5').update(file.buffer, 'utf-8').digest('hex');//计算出上传文件的md5,当做文件名
     //将文件以md5+后缀的方式存进public的uploads文件夹里
     fs.writeFileSync(path.resolve(__dirname, '../public' + staticUrl + md5Name) + extname, file.buffer)
