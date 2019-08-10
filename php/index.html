@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
+    <title>人工智能</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ol,
+        ul,
+        li {
+            list-style: none;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+        }
+
+        .footer input,
+        .footer button {
+            border-color: black;
+            border-style: solid;
+            border-width: 3px;
+        }
+
+        .footer input {
+            width: 80%;
+            height: 100%;
+            line-height: 100%;
+            font-size: 100%;
+        }
+
+        .footer .button {
+            border-left: none;
+            outline: 0;
+            width: 20%;
+            height: 100%;
+        }
+
+        .footer button:active {
+            background-color: #efefef;
+        }
+
+        .main {
+            height: 80vh;
+            overflow-y: scroll;
+        }
+
+        .main li.send,
+        .main li.get {
+            /* width: 200px; */
+            background-color: #efefef;
+        }
+
+        .main li {
+            border-bottom: 1px dashed red;
+        }
+
+        .main li.send {
+            text-align: right;
+        }
+
+        .main li.get {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main" id="chatContent">
+    </div>
+    <div class="footer">
+        <input type="text" id="inputText"><input type="submit" class="button" id="send" value="提交">
+    </div>
+    <script>
+        $('#inputText').on('keydown', e => {
+            if (e.keyCode == 13) {
+                let v = $('#inputText').val();
+                if (!v.trim()) {
+                    return false;
+                }
+                sendMsg(v)
+                $('#inputText').val('');
+            }
+        });
+        $('#send').on('click', function () {
+            let v = $('#inputText').val()
+            if (!v.trim()) {
+                return false;
+            }
+            sendMsg(v)
+            $('#inputText').val('');
+        });
+        function sendMsg(value) {
+            $('#chatContent').append(`<li class="send">${value}</li>`);
+            getTuLing(value);
+        }
+        function getMsg(value) {
+            $('#chatContent').append(`<li class="get">${value}</li>`)
+        }
+        function r(v) {
+            return v.replace('我', '你').replace('你', '我').replace('?', '!').replace('？', '!').replace('吗', '').replace('Can you', 'I can')
+        }
+        function getTuLing(value) {
+            $.ajax({
+                url: 'https://api.nnnnzs.cn/api/chat',
+                type: 'post',
+                data: { content: value },
+                success: (res) => {
+                    res.results.forEach(element => {
+                        getMsg(element.values.text)
+                    });
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
