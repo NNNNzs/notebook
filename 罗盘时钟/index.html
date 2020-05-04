@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* font-size: 18px; */
+            font-size: 1rem;
+        }
+
+        #app {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color: #000;
+            color: gray;
+        }
+
+        #hr {
+            height: 20px;
+            text-align: left;
+            position: relative;
+            vertical-align: baseline;
+            border-bottom: 1px dashed #fff;
+            color: #fff;
+            /* border-bottom: 2px solid red; */
+        }
+
+        .scale {
+            position: absolute;
+            transition: all 1s linear;
+        }
+
+
+        .scale li {
+            position: absolute;
+            left: 100px;
+            top: 190px;
+            width: 200px;
+            height: 20px;
+            display: inline-block;
+            text-align: right;
+        }
+
+        .scale li.active {
+            color: #ffffff;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+    </div>
+</body>
+<script>
+    const $$ = function (select) {
+        return document.querySelectorAll(select);
+    }
+    const numToChinese = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二', '十三', '十四', '十五', '十六', '十七', '十八', '十九', '二十', '二十一', '二十二', '二十三', '二十四', '二十五', '二十六', '二十七', '二十八', '二十九', '三十', '三十一'];
+    let timer = null;
+    const monthLength = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    let currentYear = new Date().getFullYear()
+    if (currentYear % 4 === 0 && currentYear % 400 !== 0) {
+        monthLength[1] = 29;
+    }
+    const currentMonthLength = monthLength[new Date().getMonth()]
+
+    function start() {
+        const tableList = ['month', 'day', 'week', 'hour', 'min', 'seconds'];
+
+
+        const [monthDom, dayDom, weekDom, hourDom, minDom, secondsDom] = tableList.map(className => $$(`#app .${className}`)[0]);
+
+        const setTransform = (dom, rate) => {
+            dom.style.transform = `rotateZ(${-rate}deg)`
+        };
+        const setActive = (dom, currentIndex) => {
+            //如果有兄弟节点高亮的,先移除
+            const domList = dom.querySelectorAll('.active');
+            if (domList.length > 0) {
+                dom.querySelector('.active').classList.remove('active')
+            }
+            const allNode = dom.querySelectorAll('li');
+            const currentLi = currentIndex - 1 < 0 ? allNode[allNode.length] : allNode[currentIndex - 1];
+            currentLi.classList.add('active');
+        }
+
+        const taskObj = {
+            setMonthRate(currentDate) {
+                const currentIndex = currentDate.getMonth() + 1; //0-11 so +1
+                const rate = currentIndex * 30 - 90;
+
+                setActive(monthDom, currentIndex)
+                setTransform(monthDom, rate)
+            },
+            setWeekRate(currentDate) {
+                const currentIndex = currentDate.getDay(); // 0-6 
+                const rate = (currentIndex - 1) * 360 / 7;//周日算0，所以前移一位
+
+                setActive(weekDom, currentIndex)
+                setTransform(weekDom, rate)
+            },
+            setDayRate(currentDate) {
+                const currentIndex = currentDate.getDate() + 1; //1-31 
+                const rate = currentIndex * parseInt(360 / currentMonthLength) - 90;
+
+                setActive(dayDom, currentIndex - 1)
+                setTransform(dayDom, rate)
+            },
+            setHourRate(currentDate) {
+                const currentIndex = currentDate.getHours();
+                const rate = currentIndex * 15 - 90;
+
+                setActive(hourDom, currentIndex)
+                setTransform(hourDom, rate)
+            },
+            setMinRate(currentDate) {
+                const currentIndex = currentDate.getMinutes();
+                const rate = currentIndex * 6 - 90;
+
+                setActive(minDom, currentIndex)
+                setTransform(minDom, rate)
+
+            },
+            setSecondsRate(currentDate) {
+                const currentIndex = currentDate.getSeconds();//0-59
+                const rate = currentIndex * 6 - 90;
+
+                setActive(secondsDom, currentIndex)
+                setTransform(secondsDom, rate);
+            }
+
+        }
+
+        timer = setInterval(() => {
+            const currentDate = new Date();
+            Object.values(taskObj).forEach(fun => fun(currentDate))
+        }, 500)
+    }
+
+    function end() {
+        clearInterval(timer)
+    }
+    function createTable(config = {}) {
+        const data = { radius: 200, num: 12, unit: '', className: '' };
+        config = Object.assign(data, config)
+        const offset = parseInt(- config.num / 4);//往回转的刻度数，不然水平右边的是1，应该是3
+
+        let i = 1;
+        let ul = `<ul style="width:${config.radius * 2}px;height:${config.radius * 2}px" class="scale ${config.className}">`;
+        while (i <= config.num) {
+            let rate = 360 / config.num * (i + offset);
+            ul += `<li style="transform:rotateZ(${rate}deg);left:${config.radius / 2}px;top:${config.radius - 10}px;width:${config.radius}px"><span>${config.showChinese ? numToChinese[i - 1] : i}${config.unit}</span></li>`;
+            i++
+        }
+        ul += '</ul>';
+        return ul;
+    }
+    function createHr(data = {}) {
+        const { radius = 800, left = 170 } = data;
+        const year = new Date().getFullYear()
+        const html = `<div id="hr" style="width:${radius / 2}px;left:${radius / 4}px">
+            <span>${year}年</span>
+            <span style="position:absolute;left:${left}px">星期</span>
+            </div>`;
+        return html;
+    }
+    function init() {
+        const clientMin = Math.min(document.body.clientHeight, document.body.clientWidth);
+        const clientMinRate = clientMin / 1297;
+
+        let list = [
+            { radius: 250, num: 12, unit: '月', className: 'month', showChinese: true },
+            { radius: 450, num: currentMonthLength, unit: '日', className: 'day', showChinese: true },
+            { radius: 600, num: 7, className: 'week', showChinese: true },
+            { radius: 700, num: 24, unit: '时', className: 'hour' },
+            { radius: 800, num: 60, unit: '分', className: 'min', },
+            { radius: 900, num: 60, unit: '秒', className: 'seconds', }
+        ].map(e => {
+            e.radius = clientMinRate * e.radius
+            return e;
+        });
+        let tableHTML = list.reduce((total, ele) => {
+            return total + createTable(ele)
+        }, '');
+        const hrLine = createHr({ radius: 900 * clientMinRate, left: clientMinRate * 235 });
+
+        $$('#app')[0].innerHTML = tableHTML + hrLine;
+        start()
+    }
+    init()
+    window.onresize = function () {
+        init()
+    }
+</script>
+
+</html>

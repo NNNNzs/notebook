@@ -2,6 +2,12 @@ const path = require('path');
 const mode = 'development' || 'production'//production会压缩成一行
 module.exports = {
     mode: 'development',
+    entry:{
+        main:'./src'
+    },
+    devServer:{
+
+    },
     entry: {
         main: './src/index.js'
     },
