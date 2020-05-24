@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title>Document</title>
+    <title>罗盘时钟</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             /* font-size: 18px; */
             font-size: 1rem;
+            box-sizing: border-box;
         }
 
         #app {
@@ -67,7 +68,7 @@
     const $$ = function (select) {
         return document.querySelectorAll(select);
     }
-    const numToChinese = ['零', '一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二', '十三', '十四', '十五', '十六', '十七', '十八', '十九', '二十', '二十一', '二十二', '二十三', '二十四', '二十五', '二十六', '二十七', '二十八', '二十九', '三十', '三十一'];
+    const numToChinese = ['日', '一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二', '十三', '十四', '十五', '十六', '十七', '十八', '十九', '二十', '二十一', '二十二', '二十三', '二十四', '二十五', '二十六', '二十七', '二十八', '二十九', '三十', '三十一'];
     let timer = null;
     const monthLength = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
     let currentYear = new Date().getFullYear()
@@ -86,85 +87,98 @@
         const setActive = (dom, currentIndex) => {
             //如果有兄弟节点高亮的,先移除
             const domList = dom.querySelectorAll('.active');
+            const allNode = dom.querySelectorAll('li');
+            
+            // 去除选中的
             if (domList.length > 0) {
                 dom.querySelector('.active').classList.remove('active')
             }
-            const allNode = dom.querySelectorAll('li');
-            const currentLi = currentIndex - 1 < 0 ? allNode[allNode.length] : allNode[currentIndex - 1];
-            if (!currentLi.classList) {
-                console.log(currentLi)
-            }
-            currentLi.classList.add('active');
+            const currentLi = allNode[currentIndex];
+
+            // const currentLi = currentIndex - 1 < 0 ? allNode[allNode.length] : allNode[currentIndex - 1];
+            // if (!currentLi.classList) {
+            //     console.log(currentLi)
+            // }
+            currentLi.classList.toggle('active');
         }
 
         const taskObj = {
             setMonthRate(currentDate) {
-                const currentIndex = currentDate.getMonth() + 1; //0-11 so +1
-                const rate = currentIndex * 30 - 90;
+                const currentIndex = currentDate.getMonth(); //0-11 
+                const rate = currentIndex * 360 / 12;
 
-                setActive(monthDom, currentIndex + 1)
+                setActive(monthDom, currentIndex)
                 setTransform(monthDom, rate)
             },
-            setWeekRate(currentDate) {
-                const currentIndex = currentDate.getDay() -1; // 0-6 
-                const rate = currentIndex  * 360 / 7;//周日算0，所以前移一位
-
-                setActive(weekDom, currentIndex+2)
-                setTransform(weekDom, rate)
-            },
             setDayRate(currentDate) {
-                const currentIndex = currentDate.getDate() + 1; //0-30 so +1
-                // const rate = currentIndex * parseInt(360 / currentMonthLength) - 90;
-                const rate = currentIndex * 360 / currentMonthLength - 90;
-
+                // 日期是从1 - 当前月最后一天， 所以索引 -1 
+                const currentIndex = currentDate.getDate() - 1;
+                const rate = currentIndex * 360 / currentMonthLength;
 
                 setActive(dayDom, currentIndex)
                 setTransform(dayDom, rate)
             },
+            setWeekRate(currentDate) {
+                const currentIndex = currentDate.getDay(); // 0-6 
+                const rate = currentIndex * 360 / 7;//周日算0，所以前移一位
+
+                setActive(weekDom, currentIndex)
+                setTransform(weekDom, rate)
+            },
             setHourRate(currentDate) {
-                const currentIndex = currentDate.getHours() + 1;//0-23
-                const rate = (currentIndex - 1) * 15 - 90;
+                const currentIndex = currentDate.getHours();//0-23
+                const rate = currentIndex * 360 / 24;
 
                 setActive(hourDom, currentIndex)
                 setTransform(hourDom, rate)
             },
             setMinRate(currentDate) {
-                const currentIndex = currentDate.getMinutes()+1;  //0-59
-                const rate = (currentIndex-1) * 6 - 90;
+                const currentIndex = currentDate.getMinutes();  //0-59
+                const rate = currentIndex * 360 / 60
 
                 setActive(minDom, currentIndex)
                 setTransform(minDom, rate)
 
             },
             setSecondsRate(currentDate) {
-                const currentIndex = currentDate.getSeconds() + 1;//0-59
-                const rate = currentIndex * 6 - 90;
+                const currentIndex = currentDate.getSeconds();//0-59
+                const rate = currentIndex * 360 / 60
 
                 setActive(secondsDom, currentIndex)
                 setTransform(secondsDom, rate);
             }
 
         }
-
+        // function step() {
+        //     const currentDate = new Date();
+        //     Object.values(taskObj).forEach(fun => fun(currentDate))
+        //     timer = requestAnimationFrame(step)
+        // }
+        // step()
         timer = setInterval(() => {
             const currentDate = new Date();
             Object.values(taskObj).forEach(fun => fun(currentDate))
-        }, 500)
+        }, 1000)
     }
 
     function end() {
-        clearInterval(timer)
+        // clearInterval(timer)
+        cancelAnimationFrame(timer)
     }
     function createTable(config = {}) {
-        const data = { radius: 200, num: 12, unit: '', className: '' };
+        const data = { radius: 200, num: 12, unit: '', className: '', startIndex: 0 };
         config = Object.assign(data, config)
-        const offset = parseInt(- config.num / 4);//往回转的刻度数，不然水平右边的是1，应该是3
 
         let i = 0;
         let ul = `<ul style="width:${config.radius * 2}px;height:${config.radius * 2}px" class="scale ${config.className}">`;
-        while (i <= config.num) {
-            let rate = 360 / config.num * (i + offset);
-            ul += `<li style="transform:rotateZ(${rate}deg);left:${config.radius / 2}px;top:${config.radius - 10}px;width:${config.radius}px"><span>${config.showChinese ? numToChinese[i] : i}${config.unit}</span></li>`;
+        while (i < config.num) {
+            // 每个刻度的旋转的值
+            const rate = 360 / config.num * i;
+
+            // 展示中文的几个都是从一开始而不是0，如一月日，0秒分时
+            // 例外是周，索引从0开始
+            const Text = config.showChinese ? numToChinese[i + config.startIndex] : i;
+            ul += `<li style="transform:rotateZ(${rate}deg);left:${config.radius / 2}px;top:${config.radius - 10}px;width:${config.radius}px"><span>${Text}${config.unit}</span></li>`;
             i++
         }
         ul += '</ul>';
@@ -184,8 +198,8 @@
         const clientMinRate = clientMin / 1297;//最佳观赏的分辨率是1297，得到一个比例值
 
         let list = [
-            { radius: 250, num: 12, unit: '月', className: 'month', showChinese: true },
-            { radius: 450, num: currentMonthLength, unit: '日', className: 'day', showChinese: true },
+            { radius: 250, num: 12, unit: '月', className: 'month', showChinese: true, startIndex: 1 },
+            { radius: 450, num: currentMonthLength, unit: '日', className: 'day', showChinese: true, startIndex: 1 },
             { radius: 600, num: 7, className: 'week', showChinese: true },
             { radius: 700, num: 24, unit: '时', className: 'hour' },
             { radius: 800, num: 60, unit: '分', className: 'min', },
@@ -206,6 +220,7 @@
     window.onresize = function () {
         init()
     }
+    requestAnimationFrame
 </script>
 
 </html>
