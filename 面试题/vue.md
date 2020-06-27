@@ -17,6 +17,7 @@
 6. updated patch之后，又重新挂载到dom上
 7. beforeDestory 销毁之前，一般用来手动解除一些事件的监听
 8. destoryed 访问不到实例，当前组件和子组件监听器全部移除
+9. 父子组件，父组件created,同级子组件按照dom顺序，子组件created、mounted、父组件mounted，
 
 ## virtual dom
 1. 虚拟Dom在内存中操作，patch再更新，避免频繁的重绘重排
