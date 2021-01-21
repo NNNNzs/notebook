@@ -1,59 +1,65 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
-		<div id="app">
-			<div>
-				<input type="text" v-model="t1" @keyup="jsonp();"/>
-				<ul>
-					<li v-for="(v,k) in tips">{{v}}</li>
-				</ul>
-			</div>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+
+<body>
+	<div id="app">
+		<div>
+			<input type="text" v-model="t1" @keyup="jsonp();" />
+			<ul>
+				<li v-for="(v,k) in tips">{{v}}</li>
+			</ul>
 		</div>
-		
-        <!-- <script src="js/vue2.5.js" type="text/javascript" charset="utf-8"></script> -->
-        <script src="https://cdn.bootcss.com/vue/2.6.6/vue.js"></script>
-        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-		<!-- <script src="js/vue-resource.js" type="text/javascript" charset="utf-8"></script> -->
-		<script type="text/javascript">
-			var vue = new Vue({
-				el:'#app',
-				data:{
-					t1:'',
-					tips:[]
-				},
-				methods:{
-					jsonp:function(){
-                        let me = this
-                        $.ajax({
-                            url:'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',
-                            data:me.t1,
-                            method:'get'
-                        })
-                        .then(resp=>{
-                            var result = JSON.stringify(resp)
-                            console.log(resp.data)
-                        })
-                        .catch(err=>{
-                            console.log(err)
-                        })
-                        
-						// //百度联想查询接口
-						// var url = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su';
-						// //改变jsonp的callback(跨域函数请求)为cb
-						// this.$http.jsonp(url,{wd:this.t1},{jsonp:'cb'}).then(function(response){
-							
-						// 	this.tips = response.data.s;
-							
-						// },function(response){
-						// 	alert('请求失败， ' + response.status);
-						// });
-					}
+	</div>
+
+	<!-- <script src="js/vue2.5.js" type="text/javascript" charset="utf-8"></script> -->
+	<script src="https://cdn.bootcss.com/vue/2.6.6/vue.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<!-- <script src="js/vue-resource.js" type="text/javascript" charset="utf-8"></script> -->
+	<div>
+		<a href="file://download.fengbn.cn/redirect.php?softid=551">123123123123</a>
+	</div>
+	<script type="text/javascript">
+		var vue = new Vue({
+			el: '#app',
+			data: {
+				t1: '',
+				tips: []
+			},
+			methods: {
+				jsonp: function () {
+					let me = this
+					$.ajax({
+						url: 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',
+						data: me.t1,
+						method: 'get'
+					})
+						.then(resp => {
+							var result = JSON.stringify(resp)
+							console.log(resp.data)
+						})
+						.catch(err => {
+							console.log(err)
+						})
+
+					// //百度联想查询接口
+					// var url = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su';
+					// //改变jsonp的callback(跨域函数请求)为cb
+					// this.$http.jsonp(url,{wd:this.t1},{jsonp:'cb'}).then(function(response){
+
+					// 	this.tips = response.data.s;
+
+					// },function(response){
+					// 	alert('请求失败， ' + response.status);
+					// });
 				}
-			});
-		</script>
-	</body>
+			}
+		});
+	</script>
+</body>
+
 </html>
