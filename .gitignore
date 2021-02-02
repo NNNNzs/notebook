@@ -6,3 +6,5 @@ sql.json
 # 腾讯云公共请求配置
 tencentPublicHeader.js
 ejs模板/afterschool.zip
+
+temp
